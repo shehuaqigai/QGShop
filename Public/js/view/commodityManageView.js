@@ -261,7 +261,7 @@
             var name=dialog.find("input.cate_name").val();
             var select=dialog.find(".cateSelect").last();
             var status=dialog.find(".add_categoryAction").attr("status");
-            var pid,spid;
+            var pid;
             //默认情况下是本级分类
             var parentPid=parseInt(select.attr("data-pid"));
             //如果选择了分类，这个分类下面还没有分类的话
@@ -277,10 +277,8 @@
             }
             if(cateValue=="self"){
                 pid=parentPid;
-                spid=select.attr("data-spid");
             }else{
                 pid=parseInt(cateValue);
-                spid=select.attr("data-spid")+pid+"|";
             }
             if($("a.plupload_start").hasClass('plupload_disabled')) {
                $prompt.html("亲,要上传一张图片哦!");
@@ -290,8 +288,7 @@
                 name:name,
                 pid:pid,
                 is_index:indexShow,
-                ordid:ordid,
-                spid:spid
+                ordid:ordid
             };
             if(status=="update"){
                 var id=this.addOrSubCate.id;
