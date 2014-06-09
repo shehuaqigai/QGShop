@@ -7,15 +7,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>微商城后台管理</title>
-    <link rel="shortcut icon" href="/weChatDev/Public/imgs/favicon.ico" type="image/x-icon">
-    <link href="/weChatDev/Public/css/lib/reset.css" rel="stylesheet"/>
-    <link href="/weChatDev/Public/css/lib/iconmoon.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/QGShop/Public/imgs/favicon.ico" type="image/x-icon">
+    <link href="/QGShop/Public/css/lib/reset.css" rel="stylesheet"/>
+    <link href="/QGShop/Public/css/lib/iconmoon.css" rel="stylesheet"/>
 
 
 
 
 
-<link href="/weChatDev/Public/css/custom/adminLogin.css" rel="stylesheet"/>
+<link href="/QGShop/Public/css/custom/adminLogin.css" rel="stylesheet"/>
 </head>
 <body>
 <div id="loginForm">
@@ -33,7 +33,7 @@
          <td>
              <div class="verifyCode">
                  <a href="javascript:void(0);" class="refreshCode">看不清</a>
-                 <img src="/weChatDev/index.php/admin/Index/generatorVerifyCode" alt="看不清"/>
+                 <img src="/QGShop/index.php/admin/Index/generatorVerifyCode" alt="看不清"/>
                  <input type="text" class="checkCode"/>
              </div>
          </td>
@@ -59,7 +59,7 @@
         var checkCode=$('.checkCode');
         var errcodeMesg=$('.errorMesg');
         refreshCodeLink.addEventListener('click',function(e){
-            img.src="/weChatDev/index.php/admin/Index/generatorVerifyCode";
+            img.src="/QGShop/index.php/admin/Index/generatorVerifyCode";
         });
         button.addEventListener('click',function(e){
             var user=userName.value;
@@ -77,7 +77,7 @@
                 errcodeMesg.innerHTML="请输入验证码!";
                 return;
             }
-            var url="/weChatDev/index.php/Admin/Index/verifyCode";
+            var url="/QGShop/index.php/Admin/Index/verifyCode";
             ajax(url,'code='+code,function(data){
                 if(!data){
                     errcodeMesg.innerHTML="验证码错误!";
@@ -91,10 +91,10 @@
         });
 
         function verifyUser(postData){
-            var url="/weChatDev/index.php/Admin/Index/verifyUser";
+            var url="/QGShop/index.php/Admin/Index/verifyUser";
             ajax(url,postData,function(data){
                 if(data == 'ok'){
-                    location.href="/weChatDev/index.php/Admin/Index/adminHome";
+                    location.href="/QGShop/index.php/Admin/Index/adminHome";
                 }else{
                     errcodeMesg.innerHTML="用户名或密码错误!";
                 }

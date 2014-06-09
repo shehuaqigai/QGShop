@@ -26,9 +26,8 @@ class Item_cateModel extends Model {
     }
 
     public function update_cate($data){
-
         if($this->create($data,2)){
-            $result = $this->add(); // 更新数据到数据库
+            $result = $this->save(); // 更新数据到数据库
             if($result){        // 如果主键是自动增长型 成功后返回值就是最新插入的值
                 return $result;
             }else{return false;}

@@ -73,7 +73,7 @@
      */
     ADMIN.tpl['productCategory'] = _.template(''+
      '<div class="pro_cate">' +
-        '<p><button class="add_cate" spid="0">添加分类</button></p>'+
+        '<p><button class="add_cate" pid="0" status="addCate">添加分类</button></p>'+
         "<table>"+
         "<caption><strong>商品分类列表</strong></caption>"+
         "<thead>"+
@@ -99,8 +99,8 @@
             '<td><img src="'+ADMIN.global.APPPATH+'Public/resource/uploads/<%= value.get("img") %>"/></td>' +
             '<td class="cate_type" status="<%= value.get("type") %>"><% if(value.get("type")){ %>商品类型<%}else{%>标记类型<%}%></td>' +
             '<td width="250px">' +
-                '<button class="add_subCate" spid="<%= value.get("spid") %>" id="<%= value.get("id") %>">添加子类</button>' +
-                '<button class="updateCate" id="<%= value.get("id") %>" spid="<%= value.get("spid") %>" status="update">编辑</button>' +
+                '<button class="add_subCate" pid="<%= value.get("pid") %>" id="<%= value.get("id") %>" status="addSubCate">添加子类</button>' +
+                '<button class="updateCate" id="<%= value.get("id") %>" pid="<%= value.get("pid") %>" status="update">编辑</button>' +
                 '<button id="<%= value.get("id") %>">删除</button>' +
             '</td>' +
         "</tr>"+
@@ -111,7 +111,7 @@
      * @type {*}
      */
     ADMIN.tpl['selectCate'] = _.template('' +
-        '<select name="topCate" class="cateSelect" data-pid="<%= pid %>" data-spid="<%= spid %>" >' +
+        '<select name="topCate" class="cateSelect" data-pid="<%= pid %>" >' +
             '<option value="self" <%if(!id){%> selected <%}%>>本级分类</option>'+
             '<% options.each(function(value){ if(value.get("pid")==pid){ %>' +
             '<option value="<%= value.get("id") %>"  <%if(value.get("id")==id){%> selected <%}%>  ><%= value.get("name") %> </option>'+

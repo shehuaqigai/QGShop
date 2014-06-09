@@ -87,15 +87,16 @@
             this.$el.find("tbody.cateLists").html(this.template['p_c_td']({tableContent:this.cateTable}));
         },
         /**
-         * 触发添加分类动作分配到指定路由
+         * 触发添加分类和添加子分类动作
+         * 分配到指定路由
          * @param e
          */
         Category:function(e){
             var ele= e.target;
-            var spid=ele.getAttribute("spid");
+            var pid=ele.getAttribute("pid");
             var id=ele.getAttribute("id");
             var status=ele.getAttribute("status");
-            this.addOrSubCate={spid:spid,id:id,status:status};
+            this.addOrSubCate={pid:pid,id:id,status:status};
             var time=new Date();
            window.location.href=ADMIN.global.ADMINPATH+'Index/adminHome#commodityManage/add_categoryAction?time='+time.getTime();
         },
@@ -104,20 +105,20 @@
          * @param button
          */
         add_categoryAction:function(button){
-            var dialog=this.$tempDialog;
-            var cateTable=this.cateTable;
+            var dialog=this.$tempDialog;  //浮层容器
+            var cateTable=this.cateTable;//分类表
             var self=this;
             //添加分类还是添加子分类
             var add_sub=this.addOrSubCate;
-            var spid=add_sub.spid;
-            var id=add_sub.id;
+            var pid=add_sub.pid;
+            var id=parseInt(add_sub.id);
             var status=add_sub.status;
             var temp='';
-            if( spid.indexOf("|") !=-1 && id){
-               temp=this.addSubCate(spid,id,cateTable);
+            //添加分类模板
+            if(status=="addCate" || pid =="0"){
+                temp=self.template['selectCate']({options:cateTable,pid:0,id:null});
             }else{
-                //添加分类模板
-                temp+=self.template['selectCate']({options:cateTable,pid:0,spid:"0",id:null});
+                temp=this.addSubCate(pid,id,cateTable);            //如果是添加子类进来和更新分类进来的
 
             }
             dialog.html(this.template[button]());
@@ -135,7 +136,6 @@
                         var result=(0,1,eval)('('+obj.response+')');
                         var createCate=_.extend(self.upload.settings.multipart_params,result);
                         cateTable.push(createCate);
-
                     }
                 });
             }
@@ -185,18 +185,25 @@
 
 
         },
-        //子分类模板
-        addSubCate:function(spid,id,cateTable){
-           var spidArray,temp="";
-            var newArray=[];
-            spidArray=spid.split("|");
-            spidArray.pop();
-            _.each(spidArray,function(value,key){
-                newArray.push(value);
-                temp+=self.template['selectCate']({options:cateTable,pid:value,id:id,spid:newArray.join("|")+"|"});
+
+        addSubCate:function(pid,id,cateTable){
+            var pids=[];
+            var parentModel;
+            var temp='';
+            pids[id]=pid;
+            while(parseInt(pid) !=0){
+                //获取父id的pid
+                id=pid;
+                parentModel=cateTable.get(id);
+                pid=parentModel.get("pid");
+                pids[id]=pid;
+            }
+            pids.push(0);
+            pids.reverse();
+            _.each(pids,function(value,key){
+                temp+=self.template['selectCate']({options:cateTable,pid:value,id:key});
             });
             return temp;
-
         },
         updateCate:function(id){
               var cate=this.cateTable.get(id);
@@ -210,6 +217,7 @@
                dialog.find("input.ordid").val(cate.get("ordid"));
             this.imageUpload(url,function(up,file,data){
                 var res=data.response;
+                console.log(res);
                 if(!res){
                     var $prompt=dialog.find(".add_cate_prompt");
                     $prompt.html("数据提交失败！");
@@ -220,9 +228,6 @@
                         cate.set(cateUpdate);
                 }
             });
-
-
-
         },
         /**
          * 在添加分类中进行分类选择的时候触发的动作处理
