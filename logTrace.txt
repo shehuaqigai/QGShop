@@ -1,0 +1,9 @@
+array (
+  'ToUserName' => 'gh_9f05ce486891',
+  'FromUserName' => 'oQEf7t8k5cyo2tdhVGDTC_vmKZdg',
+  'CreateTime' => '1400739128',
+  'MsgType' => 'event',
+  'Event' => 'subscribe',
+  'EventKey' => 'qrscene_4',
+  'Ticket' => 'gQE07zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL1JreVUyR2JsWUh3WkhzcXhfR0NFAAIE_3h9UwMEAAAAAA==',
+)

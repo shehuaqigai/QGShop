@@ -1,0 +1,7 @@
+/*Android 4 pad and phones*/
+@media all
+and (min-width : 1024px)
+and (max-width : 1279px)
+and (orientation : landscape) {
+
+}

@@ -1,0 +1,11 @@
+/*---------------*/
+/*-----Pads------*/
+/*---------------*/
+
+/*pad with high definition, width large than 1080*/
+@media all
+and (min-width : 1080px)
+and (orientation : portrait) {
+
+
+}

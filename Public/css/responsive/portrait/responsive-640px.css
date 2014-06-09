@@ -1,0 +1,6 @@
+/*some android 2.3 phone, width is 640, mostly shanzhai*/
+@media all
+and (width : 640px)
+and (orientation : portrait) {
+
+}

@@ -1,0 +1,7 @@
+/*small android pads with height is 600*/
+@media all
+and (min-width : 1024px)
+and (max-height : 700px)
+and (orientation : landscape) {
+
+}

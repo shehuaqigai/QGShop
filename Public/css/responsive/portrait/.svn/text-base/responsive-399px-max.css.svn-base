@@ -1,0 +1,797 @@
+/*---------------*/
+/*-----Phones----*/
+/*---------------*/
+/*iphone 3*/
+@media all
+and (width : 360px)
+and (orientation : portrait) {
+
+   html{ overflow-y: scroll;}
+    .html {
+        font-size: 12px;
+    }
+    .portrait .pageWrap {
+        right: 20px;
+    }
+    .page .page-header .page-header-content {
+        height: 72px;
+        font-size: 14px;
+    }
+    #loginSpan{
+    	top:55px;
+    }
+    .tile-group-title{
+        margin:0px;padding:0px;height:0px;line-height:0px;
+    }
+
+    .page .page-header .page-header-content .logo {
+        left: 14px;
+        top: 0px;
+        width: 160px;
+        height: 80px;
+    }
+    .page .page-header .page-header-content .user-login {
+        margin: 12px 16px 0 0;
+    }
+
+    .page .page-region {
+        padding: 0 13px 0px 19px;
+    }
+    #readBookList .tile{
+        width:106px;
+        height:106px;
+    }
+    #readBookList .left-triangle{
+        border-bottom: 0.9rem solid transparent;
+        right:3rem;
+    }
+    #readBookList .left-block{
+        border-bottom: 0.9rem solid transparent;
+        width: 3rem;
+    }
+    .tile .brand > .title{width:50%;}
+
+
+    .tile {
+        width: 74px;
+        height: 74px;
+        margin: 0 8px 8px 0;
+    }
+    .tile.quadro {
+        width: 320px;
+    }
+
+    .tile2t2 {
+        margin: 0 8px 8px 0;
+        width: 156px;
+        height: 156px;
+    }
+
+    .tile1t2 {
+        margin: 0 8px 8px 0;
+        width: 140px;
+        height: 66px;
+    }
+
+    .tile.double, .doubletile {
+        width: 156px;
+    }
+
+    .tile.double-vertical {
+        height: 156px;
+    }
+
+    .tile .tile-content {
+        width: 58px;
+        height: 58px;
+        padding: 4px;
+    }
+    .tile.image-slider .tile-content{
+        width: 66px;
+        height: 66px;
+    }
+    .tile.double .tile-content {
+        width: 132px;
+        height: 58px;
+        padding: 4px;
+    }
+
+    .tile.double-vertical h1.tileIcon {
+        font-size: 48px;
+        line-height: 48px;
+        margin-top: 30px;
+    }
+
+    .tile h1.tileIcon{
+        font-size: 32px;
+        line-height: 32px;
+        margin-top: 8px;
+    }
+
+    .tile .brand, .tile .tile-status {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        min-height: 24px;
+    }
+
+    .tile .brand > .name, .tile .tile-status > .name {
+        margin-bottom: 2px;
+        margin-left: 5px;
+        text-overflow: ellipsis;
+    }
+    .helpNav.tile .brand > .name, .tile .tile-status > .name {
+        font-size: 0.85rem;
+    }
+    .tile .brandIcon {
+        line-height: 24px;
+    }
+    .tile .brandInfo {
+        line-height: 24px;
+    }
+    .bg-readback {
+        background-position: left -20px;
+    }
+
+    .bookClub .backBtn {
+        width: 44px;
+        height: 44px;
+        left: 4px;
+        top: 20px;
+        font-size: 36px;
+    }
+
+    .page .page-header .page-header-content h1 {
+        left: 60px;
+        font-size: 20px;
+    }
+    .bookClub .rightBtn {
+        width:44px;
+        height:44px;
+        font-size:36px;
+        top:15px;
+    }
+    .bookClub h1 {
+        line-height: 34pt;
+        font-size: 32pt;
+    }
+    #readPage h1 {
+        line-height: 25px;
+    }
+    #readPage .bd {
+        margin-top: 0px;
+    }
+    .searchForm {
+        width: 82%;
+        margin: 10px 0 0px 30px;
+        padding: 0 0 5px 5px;
+        position: relative;
+    }
+    .searchForm input[name="keyword"] {
+        height:2.7rem;
+        left: 10px;
+        top: 0px;
+        position: absolute;
+        border:0px;
+    }
+    .searchForm input[name="keyword"]:focus {
+        border:0px;
+    }
+    #readPage small{
+        display: none;
+    }
+    .readPage .deleteBtn {
+        width: 40px;
+        height: 32px;
+        font-size: 15px;
+        position:relative;
+        top:-7px;
+    }
+
+    .page .pageContent {
+        margin-left: 20px;
+    }
+    .rank-item-double{
+        width:130px;
+        height: 40px;
+        margin:10px 5px;
+        font-size: 15px;
+        display: block;
+        position: relative;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        -webkit-box-sizing: border-box;
+    }
+    .rank-item-single{
+        width: 60px;
+        height: 40px;
+        margin:10px 5px;
+        font-size: 15px;
+        display: block;
+        position: relative;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        -webkit-box-sizing: border-box;
+    }
+    .bookTitle {
+        display:none;
+    }
+    .chapterNav {
+        margin: 0;
+    }
+    .dialog-container {
+        width: 51%;
+        height: 38%;
+        display: block;
+        position: relative;
+        overflow: visible;
+        margin: 40% 20% 20% 20%;
+    }
+
+    .shareBtn {
+        display: block;
+        position:absolute;
+        left:0px;
+        bottom:0px;
+        width:28px;
+        height:28px;
+        text-align:center;
+        line-height:18px;
+        font-size:18px;
+    }
+    .dialog-container {
+        width: 52%;
+        height: 38%;
+        display: block;
+        position:relative;
+        overflow: visible;
+        margin: 30% 20% 30% 20%;
+    }
+    .tile-share-icon {
+        width: 60px;
+        font-size: 35px;
+        text-align: center;
+        line-height: 40px;
+        vertical-align: middle;
+        height: 40px;
+        padding: 0px;
+    }
+    .tile-share-text {
+        width: 100%;
+        height: 25px;
+        font-size: 0.8rem;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        text-align: center;
+    }
+
+
+    .readPage .delBtn {
+        color:#ff0000;
+        display: none;
+        position:absolute;
+        right:5px;
+        top:0px;
+        width:20px;
+        height:20px;
+        text-align:center;
+        line-height:18px;
+        font-size:18px;
+    }
+
+    .metro-confirm-button{
+        width:80px;
+        height:30px;
+        float: right;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        color: white;
+        border: 2px solid #E2E2E2;
+        margin:0 15px 0 0;
+
+    }
+    .metro-confirm-row{
+        width:96%;
+        min-height:35px;
+        font-size: 16px;
+        display: block;
+        position: relative;
+        float: left;
+        padding: 7px 2%;
+        color: #ffffcc;
+    }
+    .confirm-dialog-container{
+        width: 100%;
+        height: auto;
+        margin: 60% 0 0 0;
+    }
+    .breadcrumbNav{
+        width: 100%;
+        height:30px;
+        display: block;
+        position: relative;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav {
+        width: 64.5%;
+        display: inline-block;
+        position: relative;
+        padding: 0 1%;
+        font-size: 15px;
+        line-height: 30px;
+        float: left;
+        margin: 0 0 0 10px;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav span{
+        font-size: 15px;
+    }
+    .check_icon_select{
+        height: 16px;
+        width: 16px;
+        display: block;
+        left: 0;
+        top: 8px;
+        z-index: 1;
+        background-size: 100% 100%;
+        position: absolute;
+    }
+
+    .check_icon_selected{
+        height: 16px;
+        width: 16px;
+        display: block;
+        left: 0;
+        top: 8px;
+        z-index: 1;
+        background-size: 100% 100%;
+        position: absolute;
+    }
+    .breadcrumbNav .breadcrumbNav-container label{
+        width: 30%;
+        -webkit-box-sizing: border-box;
+        display: block;
+        position: relative;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        float: left;
+    }
+
+    .input-control.checkbox .helper {
+        padding-left: 18px;
+        position: relative;
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 3px;
+    }
+    .catalog-container{
+        display: block;
+        position: relative;
+        padding: 0 1%;
+        font-size: 18px;
+        line-height: 50px;
+        margin:0 0 0 15px;
+    }
+    .catalog-items{
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+    }
+
+    .catalog-hot-tab{
+        height: 100%;
+        display: block;
+        position: relative;
+        padding: 0 1%;
+        margin:0 0 0 3px;
+    }
+
+    .catalog-hot-tab-header .header-title{
+        font-size: 12px;
+        float: left;
+        line-height: 15px;
+        position: relative;
+        display: block;
+        margin: 0;
+    }
+    .catalog-hot-tab-item{
+        line-height: 30px;
+        font-size: 12px;
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        margin:0 2px;
+    }
+    .catalog-hot {
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+    .catalog-hot-tab-content {
+        width: 100%;
+        height: auto;
+        line-height: 30px;
+        font-size: 18px;
+        height: 170px;
+        position: relative;
+        display: block;
+        left: 20px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .catalog-hot-tab-content .catalog-tab-content-item {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 3px;
+        position: relative;
+        float: left;
+        -webkit-box-sizing: border-box;
+    }
+    .catalog-item {
+        line-height: 30px;
+        font-size: 15px;
+        display: block;
+        position: relative;
+        margin: 0 3px;
+        float: left;
+    }
+    .catelogPage .searchBook {
+        -webkit-box-sizing:border-box;
+        box-sizing: border-box;
+        position:relative;
+        background-size: 70px 90px;
+        width: 97%;
+        left: 2%;
+        height: 110px;
+        margin: 10px;
+        padding: 10px 60px 10px 80px;
+        background-repeat: no-repeat;
+        background-position:0 center;
+        float:left;
+    }
+    .catelogPage .searchBook .title {
+        font-weight: bold;
+        line-height: 13px;
+        font-size: 12px;
+        width: 150px;
+    }
+    .catelogPage .searchBook .author {
+        line-height: 13px;
+        font-weight: bold;
+        font-size: 12px;
+        width: 150px;
+    }
+    .catelogPage .searchBook .intro {
+        line-height: 13px;
+        font-weight: bold;
+        font-size: 10px;
+        width: 140px;
+        overflow: hidden;
+    }
+    .searchPage .searchBook {
+        -webkit-box-sizing:border-box;
+        box-sizing: border-box;
+        position:relative;
+        background-size: 70px 90px;
+        width: 92%;
+        left: 2%;
+        height: 110px;
+        margin: 10px;
+        padding: 10px 60px 10px 80px;
+        background-repeat: no-repeat;
+        background-position:0 center;
+        float:left;
+    }
+    .searchPage .searchBook .title {
+        font-weight: bold;
+        line-height: 13px;
+        font-size: 12px;
+        width: 200px;
+    }
+    .searchPage .searchBook .author {
+        line-height: 13px;
+        font-weight: bold;
+        font-size: 12px;
+        width: 200px;
+    }
+    .searchPage .searchBook .intro {
+        line-height: 13px;
+        font-weight: bold;
+        font-size: 10px;
+        width: 180px;
+        overflow: hidden;
+    }
+    .battery
+    {
+        bottom:12px;
+        position:absolute;
+        left:0px;
+        z-index:2;
+    }
+    .dcSize {
+        bottom:12px;
+        position:absolute;
+        left:45px;
+        color:#006934;
+    }
+
+    #curTime
+    {
+        bottom:15px;
+        position:absolute;
+        left:15px;
+        font-size:0.75rem;
+        color:#006934;
+    }
+    #alertMsgInfo {
+        height: 100px;
+        top:60%;
+    }
+    #alertMsgInfoButton,#alertMsgInfoButton2{
+        top:30%;
+    }
+    .catalog-sub{
+        font-size: 15px;
+    }
+    .subclass{
+        font-size: 15px;
+    }
+    .ranklist-item-content {
+        padding: 0 0 0 50px;
+    }
+    .ranklist-item {
+        margin: 10px 5px;
+        height: 105px;
+    }
+    .ranklist-item-image {
+        left: 5px;
+        height: 80px;
+        width: 50px;
+        background-size: 99.9% 100%;
+    }
+    .ranklist-item-title{
+        font-size: 14px;
+        height: 30px;
+        line-height: 16px;
+        padding: 5px 10px;
+        display: block;
+        position: relative;
+    }
+    .ranklist-item-decription{
+        font-size: 12px;
+        height: 45px;
+        line-height: 15px;
+        padding: 0 10px;
+        display: block;
+        position: relative;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: none;
+    }
+    .searchForm .searchBtn {
+        position: absolute;
+        right: 0rem;
+        top: 0.06rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        display: block;
+        background-color: #e95e36 !important;
+        background: -webkit-linear-gradient(top left, #e95e36, #ed9430);
+        text-align: center;
+        -webkit-border-radius: 0.3rem;
+    }
+    .searchForm .icon-search {
+        font-size: 1.9rem;
+        line-height: 1.6rem;
+        margin-top: 0.8rem;
+        text-shadow: 2px 1px 2px #666;
+    }
+    .pagination {
+        clear: both;
+        margin: 0px;
+        padding-top: 30px;
+        position: relative;
+        width: 100%;
+    }
+
+    .pagination .nextPage,.pagination .backPage{
+        width: 28px;
+        height: 15px;
+        margin: 5px;
+        padding: 7px;
+    }
+    .pagination .flag {
+        padding: 1px;
+        right: 3px;
+
+    }
+	.icon-book,.icon-cancel{
+		font-size:1.8rem;
+		float:left;
+		padding:0.8rem 0 0 0.6rem;
+	}
+	.icon-arrow-down,.icon-enter,.icon-checkbox,.icon-pause,.icon-play{
+		font-size:1.6rem;
+		padding:0.8rem 0.6rem 0 0;
+		float:right;
+	}
+}
+/*iphone 4*/
+@media all
+and (max-device-width : 399px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio : 2.0){
+
+    html{
+        font-size: 14px;
+    }
+    .tile .brand > .name, .tile .tile-status > .name {
+        margin-bottom: 2px;
+        margin-left: 5px;
+        text-overflow: ellipsis;
+        font-size: 12px;
+    }
+    .dialog-container {
+        width: 54%;
+        height: auto;
+    }
+    .bookClub h1 {
+        line-height: 32px;
+        font-size: 32px;
+    }
+    .searchForm {
+        margin: 0 0 0 20px;
+    }
+    .searchForm .icon-search {
+        margin-top: 0.6rem;
+    }
+    .searchForm .searchBtn {
+        height: 3.2rem;
+    }
+    .searchForm input[name="keyword"] {
+        font-size: 1.5rem;
+        height: 3rem;
+    }
+    #store_searchForm {
+        left:60px;
+    }
+    .tile{
+        font-size: 12px;
+    }
+    .searchBook .title {
+        margin: 1px 0;
+        font-weight: bold;
+        font-size: 12px;
+        width: 160px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .searchBook .author{
+        font-size: 12px;
+    }
+    .confirm-dialog-container{
+        width: 100%;
+        margin: 55% 0 0 0;
+        height: auto;
+    }
+    .pagination a{
+        font-size: 12px;
+        padding: 5px;
+    }
+    .catalog-hot-tab{
+        margin: 0 0 0 15px;
+    }
+    .searchBook .intro{
+        margin: 3px 0 5px 0;
+        line-height: 12px;
+        font-size: 10px;
+        height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .helpNav.tile .brand > .name, .tile .tile-status > .name {
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
+    }
+    .tile .tileInfo {
+        font-size: 12px;
+    }
+
+    .searchBook{
+        height: 80px;
+        background-position: 5px 5px !important;
+        background-size:60px 70px !important;
+        margin: 5px;
+        padding: 0px 30px 0px 70px;
+    }
+    .bookClub .bd{
+        margin-top:20px;
+    }
+
+    .dialog-container {
+        width: 54%;
+        display: block;
+        position: relative;
+        overflow: visible;
+        margin: 40% 20% 20% 20%;
+    }
+    .page .pageContent{
+        margin-left:20px;
+    }
+    .rank-item-double{
+        width: 130px;
+        overflow: hidden;
+        font-size: 12px;
+        height: 45px;
+        line-height: 45px;
+    }
+    .rank-item-single{
+        width: 60px;
+        overflow: hidden;
+        font-size: 12px;
+        height: 45px;
+        line-height: 45px;
+    }
+    .ranklist-item{
+        margin: 10px;
+        height: 110px;
+    }
+    .ranklist-item-title{
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px;
+        width:150px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .ranklist-item-decription{
+        line-height: 12px;
+        font-size: 12px;
+    }
+    .ranklist-item-image {
+        left: 6px;
+        top: 19px;
+        width: 70px;
+        height: 70px;
+        background-size: 100% 100%;
+        border:none;
+    }
+    .ranklist-item-content {
+        padding: 5px 0 0 72px;
+    }
+    .ranklist-item-more {
+        font-size: 14px;
+        right: 10px;
+        bottom: 1px;
+    }
+    .searchBook .title,.searchBook .author {
+        width: 160px;
+        overflow: hidden;
+        text-wrap: none;
+        text-overflow: ellipsis;
+        height: 15px;
+        line-height: 15px;
+    }
+
+    .catalog-item{
+        font-size: 14px !important;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav{
+        font-size: 12px;
+        height: 30px;
+        overflow: hidden;
+        line-height: 30px;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav span{
+        font-size: 12px;
+    }
+    /* Styles */
+}

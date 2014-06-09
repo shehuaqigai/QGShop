@@ -1,0 +1,7 @@
+/*pad with high definition, width 1280*/
+@media all
+and (min-width : 1280px)
+and (orientation : portrait) {
+
+}
+

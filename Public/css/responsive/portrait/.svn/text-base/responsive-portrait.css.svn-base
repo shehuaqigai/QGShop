@@ -1,0 +1,123 @@
+@media all and (orientation : portrait) {
+    html{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .homePage{
+        top:0;
+
+    }
+    .dialog-container {
+        width: 50%;
+        height: 40%;
+        display: block;
+        position:relative;
+        overflow: visible;
+        margin: 25% 25% 25% 25%;
+    }
+    .tile-group {
+        margin-right: 0px;
+        margin-bottom: 40px;
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .tile-group .tile-group-title{
+        position: static;
+    }
+    /****************  漫画目录 ******************/
+    .tile-content .content-center>i{
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .tile-content .content-center>i:hover{
+        color : #e3c800;
+    }
+    .tile-content .content-center>.icon-arrow-down,.tile-content .content-center>.icon-enter,.tile-content .content-center>.icon-pause{
+        left: 75%;
+    }
+    .tile-quadro{
+        margin: 0px auto;
+        overflow: auto;
+        width:650px;
+        padding-left:25px;
+    }
+    .tabs { list-style: none; margin:0 0 0 10%;}
+    .tabs li { margin:1em 0 2.5em 0em;float: left; width: 45%; display: block; }
+    .tabs li  a {opacity: 0.85; width: 100%; height: 2.5em; color: white;  display: block;  position: relative;
+        text-align: center;line-height: 2.5em ;background: black; text-decoration: none; }
+      
+    .tabs li a { border: 1px solid #ccc; }
+    .group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+    #box-one:target, #box-two:target, #box-three:target {
+         z-index: 1;
+    }
+    .tabselected
+    {
+        background: #eee;
+    }
+    #comicPage .tile .icon-cancel-2{
+            display: none;
+    }
+    /********************************************/
+    .doubletile {
+        margin: 0 12px 12px 0;
+        width: 310px;
+    }
+
+    .page .page-region {
+        padding: 14px 0 0px 24px;
+    }
+
+    .tile h1.tileIcon{
+        font-size: 36px;
+        line-height: 36px;
+        margin-top: 18px;
+    }
+
+    .tile .tile-content {
+        padding: 8px;
+    }
+
+    .bookClub .backBtn ,.bookClub .closeBtn{
+        left: 12px;
+        top: 40px;
+    }
+    .bookClub .rightBtn {
+        top: 45px;
+    }
+    .page .page-header .page-header-content h1 {
+        left: 80px;
+    }
+    .page .pageContent{
+        margin-left: 80px;
+    }
+    .searchForm {
+        width: 82%;
+        height: 2.5rem;
+        position: relative;
+        margin: 40px 0 20px 80px;
+    }
+
+    .confirm-dialog-container{
+        width: 100%;
+        height: auto;
+        margin: 50% 0 0 0;
+    }
+    .searchBook{
+        background-size:90px 110px;
+        left: 6%;
+        width: 87%;
+    }
+    .pagination {
+        left: 1%;
+        width: 87%;
+    }
+
+	/*end*/
+}/*******************/
+

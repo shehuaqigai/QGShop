@@ -1,0 +1,363 @@
+/*---------------*/
+/*-----Pads------*/
+/*---------------*/
+
+/*pad with high definition, width large than 1080*/
+@media all
+and (min-width : 1080px)
+and (orientation : portrait) {
+
+    html{
+        font-size: 30px;
+    }
+    .page .page-region {
+        padding: 28px 0 38px 38px;
+    }
+    .bookClub .backBtn ,.bookClub .closeBtn{
+        top: 44px;
+    }
+    .page .page-header .page-header-content h1 {
+        left: 120px;
+		top:44px;
+    }
+    .deleteBtn{
+		margin-left:60px;
+	}
+	.bookClub .rightBtn{
+        font-size: 64px;
+        top:40px;
+        width: 64px;
+        height: 64px;
+    }
+    .searchForm {
+        margin-left: 120px;
+    }
+    .searchResultBlock {
+        margin: 0 0px 28px 0;
+    }
+	.loginSpan{
+        top:113px;
+    }
+    .tile {
+        width: 230px;
+        height: 230px;
+        margin: 0 28px 28px 0;
+    }
+    /****************  漫画目录 ******************/
+    .tile-content .content-center>i{
+        font-size:3.5em;
+        width: 64px;
+        height: 64px;
+        margin-left: -32px;
+        margin-top: -32px;
+        line-height:64px;
+    }
+    .tile-content .content-center>.icon-arrow-down,.tile-content .content-center>.icon-enter{
+        left: 75%;
+    }
+    .tile-quadro{
+        /*2个双格加2个边距*/
+        /*336 * 2 + 20 * 2*/
+        width:1036px;
+        padding-left:20px;
+    }
+
+    /********************************************/
+    .tile2t2 {
+        width: 488px;
+        height: 488px;
+        margin: 0 28px 28px 0;
+    }
+
+    .tile1t2 {
+        width: 488px;
+        height: 230px;
+    }
+   
+
+    .tile.double, .doubletile {
+        width: 488px;
+        margin: 0 28px 28px 0;
+    }
+    .tile.quadro{
+		width:1004px;
+	}
+
+    .tile.double-vertical {
+        height: 488px;
+    }
+    .tile.onehalf {
+		width:316px;
+	}
+	.tile.onehalf-vertical {
+        height: 316px;
+    }
+    .tile.twothird-vertical {
+        height: 561px;
+    }
+    .tile .tile-content {
+        width: 206px;
+        height: 206px;
+    }
+	.shareBtn {
+		line-height: 56px;
+		font-size: 56px;
+		left:10px;
+	}
+    .tile.image-slider .tile-content{
+        width: 230px;
+        height: 230px;
+    }
+
+    .tile.double .tile-content {
+        width: 464px;
+        height: 180px;
+    }
+
+    .tile h1.tileIcon{
+        font-size: 64px;
+        line-height: 64px;
+        margin-top: 58px;
+    }
+
+    .tile.double-vertical h1.tileIcon {
+        font-size: 138px;
+        line-height: 138px;
+        margin-top: 86px;
+    }
+    .readBookList {
+        padding-left: 38px;
+    }
+    .store_cateTitle {
+        margin: 0px 38px 1rem 0;
+    }
+    .bookClub .backBtn {
+        left: 38px;
+    }
+	.icon-book,.icon-cancel{
+		font-size:3rem;
+		float:left;
+		padding:1.8rem 0 0 1.6rem;
+	}
+	.icon-arrow-down,.icon-enter,.icon-checkbox,.icon-pause,.icon-play{
+		font-size:3rem;
+		padding:1.8rem 1.6rem 0 0;
+		float:right;
+	}
+	#store_searchForm {
+		left: 110px;
+		bottom: 18px;
+	}
+	.tinyBackBtn {
+		font-size:54px;
+	}
+	.tinyBackText {
+		margin-left: 0.5rem;
+		position: absolute;
+		font-size: 1.8rem;
+	}
+	.marginTop{
+		margin-top:35px;
+	}
+	.mageziTitle{
+		height:112px;
+	}
+	.page-region .infoHeader, #infoContainer .infoHeader{
+		margin-top:112px;
+	}
+	.tabs li a {
+		font-size:1.2rem;
+	}
+	.deleteBtn{
+		font-size:1.3rem;
+	}
+	#store_searchForm {
+		width: 840px;
+	}
+	.deleteBookmarkBtn{
+		margin-top:-20px;
+	}
+	.chapterList li, .bookmarkList li{
+    	padding: 20px 0;
+    }
+	.chapterList a, .bookmarkList a {
+    	font-size:40px;
+    }
+}
+@media all
+and (min-width : 1080px)
+and (orientation : portrait)
+and (-webkit-device-pixel-ratio:3){
+	.dcSize {
+		bottom: 10px;
+		left: 90px;
+	}
+	.bookListBtn {
+		width: 130px;
+		height: 80px;
+	}
+	.continueBtn {
+		left: 160px;
+	}
+	.bookTitle {
+		font-size:1rem;
+	}
+	.chapterBody{
+		top:105px;
+	}
+	.chapterNav {
+		height:50px;
+	}
+	.chapterNav button{
+		height:50px;
+	}
+	#chapterScroller, #bookmarkScroller {
+		top:65px;
+	}
+	.chapterheader {
+		height: 80px;
+	}
+	.fontBtn{
+		height:80px;
+		width:80px;
+		right:80px;
+	}
+	.chapterListBtn {
+		width: 130px;
+		height: 80px;
+	}
+	.continueBtn{
+		width: 130px;
+		height: 80px;
+	}
+	.chapterListBtn {
+		background-size: 50% 50%;
+		left:160px;
+	}
+	.bookmarkBtn {
+		width: 45px;
+		height: 90px;
+		right: 10px;
+		background-size:100% 100%;
+		background-position: 0 0;
+	}
+	.bookmarks {
+		width: 55px;
+		height: 110px;
+		right:-5px;
+		background-size:100% 100%;
+	}
+	.bookWrapBlack .bookmarkBtn {
+		width: 45px;
+		height: 90px;
+		right: 10px;
+		background-size:100% 100%;
+		background-position: 0 0;
+	}
+	.bookWrapBlack .bookmarks {
+		width: 55px;
+		height: 110px;
+		right:-5px;
+		background-size:100% 100%;
+	}
+	#setting{
+		top:110px;
+		width:400px;
+	}
+	#fontSet{
+		width:400px;
+	}
+	#arrow-up {
+		left:274px;
+	}
+	#playCenter {
+		width: 350px;
+		height: 70px;
+	}
+	.size-set, .hor-ver-set, .mode-set {
+		width:372px;
+		height:70px;
+	}
+	.size-set div, .hor-ver-set div, .mode-set div {
+		width:176px;
+		height:70px;
+	}
+	.size-set, .hor-ver-set, .mode-set {
+		line-height:70px;
+	}
+	.hor-ver-set div {
+		font-size: 30px;
+	}
+	.mode-set div {
+		width: 110px;
+		font-size:30px;
+		margin-right:18px;
+	}
+	.small-sun {
+		width: 55px;
+	}
+	#playCenter {
+		line-height: 70px;
+	}
+	#knob-range {
+		margin: 30px 0 0 4px;
+		width: 250px;
+	}
+	#narrow{
+		line-height:50px;
+		font-size:38px;
+	}
+	.size-set .right-side {
+		font-size: 48px;
+		line-height: 50px;
+	}
+	#progressbar2 {
+		width: 250px;
+	}
+	#play_knob {
+		top:-10px;
+		width: 34px;
+		height: 34px;
+		border-radius: 17px;
+	}
+	.small-sun{
+		font-size:34px;
+		width:38px;
+	}
+	.big-sun {
+		width: 55px;
+		font-size: 50px;
+	}
+	.pageWrap div.limitFrame{
+		padding-top:50px;
+	}
+	.readPage .delBtn{
+        font-size: 2.5em;
+        right:5px;
+        top: 15px;
+        width:80px;
+        height:80px;
+    }
+    #categoryShow{
+		font-size: 1.2rem;
+
+    }
+    #categoryList{
+		font-size: 1.2rem;
+    }
+    .loginSpan{
+
+	width: auto;
+	position: absolute;
+	right: 10px;
+	top: 105px;
+	font-size: 1.2rem;
+	text-align: right
+    }
+    .chapterList li, .bookmarkList li{
+    	padding: 20px 0;
+    }
+    .chapterList a, .bookmarkList a {
+    	font-size:40px;
+    }
+}

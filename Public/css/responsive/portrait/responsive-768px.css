@@ -1,0 +1,15 @@
+
+/*phone with width of 768*/
+@media all
+and (width : 768px)
+and (orientation : portrait) {
+
+
+}
+
+@media all
+and (width : 768px)
+and (height: 1280px)
+and (orientation : portrait) {
+
+}

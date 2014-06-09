@@ -1,0 +1,8 @@
+
+/*phone with width of 800*/
+/*maybe we should consider phone and pad here*/
+@media all
+and (width : 800px)
+and (orientation : portrait) {
+
+}

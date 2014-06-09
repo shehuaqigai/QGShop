@@ -1,0 +1,9 @@
+@media all
+and (width : 1280px)
+and (max-height : 700px)
+and (orientation : landscape) {
+    .page .page-header .page-header-content .user-login {
+        float: left;
+        margin: 55px 0px 0 904px;
+    }
+}

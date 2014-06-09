@@ -1,0 +1,11 @@
+[ 2014-05-29T10:12:47+08:00 ] 140.207.54.74 /weChatDev/index.php/Wechatapi/Index/index?signature=6ab9279bb01a4d54ab80cb69dbe4f0f00f0d7fd5&timestamp=1401329567&nonce=1927199081
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000779s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000881s ]
+

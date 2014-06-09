@@ -1,0 +1,29 @@
+/*Android 4 pad and phones*/
+@media all
+and (min-width : 1024px)
+and (max-width : 1279px)
+and (orientation : landscape) {
+    .page .page-header .page-header-content .logo {
+        left: 40px;
+    }
+    .page .page-region {
+        padding: 0 2px 24px 37px;
+    }
+    .tile-group-title{
+        margin-bottom: 0px;
+    }
+
+    .tile-group .tile-group-title {
+        top: 20px;
+        margin-bottom: 24px;
+    }
+    .catalog-sub{
+        font-size: 18px;
+    }
+    .subclass{
+        font-size: 18px;
+    }
+    .catalog-item {
+        font-size: 18px;
+    }
+}

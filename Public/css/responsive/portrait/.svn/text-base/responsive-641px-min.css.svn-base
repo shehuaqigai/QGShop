@@ -1,0 +1,155 @@
+/*******************/
+/*android 4 phone*/
+/*******************/
+
+/*most morden phone width exceed 720. this is for just 720*/
+@media all
+and (min-width : 641px)
+and (orientation : portrait) {
+
+    .page .page-header .page-header-content {
+        height: 112px;
+    }
+
+    .page .page-header .page-header-content .logo {
+        left: 38px;
+        top: 0px;
+        width: 240px;
+        height: 120px;
+    }
+
+    .page .page-header .page-header-content .user-login {
+        margin: 32px 38px 0 0;
+    }
+
+    .page .page-region {
+        padding: 0 0 38px 38px;
+    }
+    
+    .searchResultBlock {
+        margin: 0 0px 20px 0;
+    }
+
+    .tile h1.tileIcon{
+        font-size: 48px;
+        line-height: 48px;
+        margin-top: 38px;
+    }
+
+    .tile.double-vertical h1.tileIcon {
+        font-size: 108px;
+        line-height: 108px;
+        margin-top: 56px;
+    }
+
+    .tile {
+        width: 146px;
+        height: 146px;
+        margin: 0 20px 20px 0;
+    }
+
+    .tile2t2 {
+        margin: 0 20px 20px 0;
+        width: 312px;
+        height: 312px;
+    }
+
+    .tile1t2 {
+        margin: 0 20px 20px 0;
+        width: 312px;
+        height: 146px;
+    }
+
+    /****************  漫画目录 ******************/
+    .tile-content .content-center>i{
+        font-size:3em;
+        width: 54px;
+        height: 54px;
+        margin-left: -27px;
+        margin-top: -27px;
+        line-height:54px;
+    }
+    .tile-content .content-center>.icon-arrow-down{
+        left: 75%;
+    }
+    .tile-quadro{
+        /*2个双格加2个边距*/
+        /*312 * 2 + 20 * 2*/
+        width:664px;
+        padding-left:20px;
+    }
+    /********************************************/
+    .tile.double, .doubletile {
+        width: 312px;
+        margin: 0 20px 20px 0;
+    }
+
+    .tile.double-vertical {
+        height: 312px;
+    }
+
+    .tile .tile-content {
+        width: 122px;
+        height: 122px;
+        padding: 12px;
+    }
+
+    .tile.image-slider .tile-content{
+        width: 146px;
+        height: 146px;
+    }
+
+    .tile.double .tile-content {
+        width: 288px;
+        height: 122px;
+        padding: 12px;
+    }
+
+    /*.tile .brand, .tile .tile-status {
+        min-height: 38px;
+    }*/
+
+    .tile .brandIcon{
+        margin: 0px 0px 0px 10px;
+    }
+
+    .tile .brandInfo{
+        right: 10px;
+    }
+
+    .tile .brand > .name, .tile .tile-status > .name {
+        margin-bottom: 10px;
+        margin-left: 16px;
+    }
+
+    .tile .titleContainer {
+        width: 100%;
+    }
+
+    .continueBtn {
+        width:88px;
+        height:36px;
+        left:108px;
+    }
+    .bookListBtn {
+        width:88px;
+        height:36px;
+    }
+    .chapterListBtn {
+        width:78px;
+        height:36px;
+        left:108px;
+    }
+    .bookTitle {
+        left:195px;
+    }
+    .bookClub .bd {
+        margin-top: 40px;
+    }
+    .fontBtn {
+        background-size: 100% 100%;
+    }
+    .bookmarkBtn {
+        background-size: auto 85%;
+    }
+}

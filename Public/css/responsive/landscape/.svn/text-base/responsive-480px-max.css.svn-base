@@ -1,0 +1,11 @@
+/*---------------*/
+/*-----Phones----*/
+/*---------------*/
+/*iphone 3*/
+@media all
+and (max-width : 480px)
+and (orientation : landscape) {
+    #comicPage .nav-tabs{
+       top:35px;
+    }
+}

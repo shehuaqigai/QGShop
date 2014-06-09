@@ -1,0 +1,12 @@
+/*some android 2.3 phone, width is 540, mostly motorola*/
+@media all
+and (width : 540px)
+and (orientation : portrait) {
+
+}
+@media all
+and (width : 540px)
+and (orientation : portrait) and (device-pixel-ratio :1.5){
+
+
+}

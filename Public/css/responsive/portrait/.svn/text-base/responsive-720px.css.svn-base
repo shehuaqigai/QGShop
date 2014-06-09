@@ -1,0 +1,171 @@
+
+/*phone with width of 720*/
+@media all
+and (width : 720px)
+and (orientation : portrait) {
+    html{
+        font-size: 14px;
+    }
+    .bookClub .backBtn ,.bookClub .closeBtn{
+        left: 25px;
+    }
+    .bookClub h1{
+		line-height:normal;
+		top:52px;
+	}
+	.searchForm {
+        margin-left: 100px;
+    }
+
+	.tile.quadro{
+		width:642px;
+	}
+    .readPage .delBtn {
+        font-size: 50px;
+        height: 60px;
+        line-height: 50px;
+        top: 10px;
+        width: 70px;
+    }
+	/****************  漫画目录 ******************/
+    .tile-content .content-center>i{
+        font-size:3em;
+        width: 54px;
+        height: 54px;
+        margin-left: -27px;
+        margin-top: -27px;
+        line-height:54px;
+    }
+    .tile-content .content-center>.icon-arrow-down{
+        left: 75%;
+    }
+    .tile-quadro{
+        /*2个双格加2个边距*/
+        /*321 * 2 + 20 * 2*/
+        width:672px;
+        padding-left:20px;
+    }
+    /********************************************/
+	.page .page-header .page-header-content h1{
+		height: 54px;
+		line-height: 54px;
+		top: 40px;
+		left:100px;
+		font-size:2.4rem;
+		overflow: hidden;
+	}
+	.page .page-region {
+        padding: 28px 0 38px 38px;
+    }
+	.deleteBtn{
+		margin-left:40px;
+        font-size:1.6rem;
+	}
+	.tile.onehalf {
+		width:202px;
+	}
+	.tile.onehalf-vertical {
+        height: 202px;
+    }
+    .tile.twothird-vertical {
+        height: 373px;
+    }
+	.readBookList {
+        padding-left: 38px;
+    }
+    .store_cateTitle {
+        margin: 0px 25px 1rem 0;
+    }
+    #store_searchForm{
+        top:45px;
+    }
+    #setting{
+        top:80px;
+        width:400px;
+    }
+    #fontSet{
+        width:400px;
+    }
+    #arrow-up {
+        left:310px;
+    }
+    #playCenter {
+        width: 350px;
+        height: 70px;
+    }
+    .size-set, .hor-ver-set, .mode-set {
+        width:372px;
+        height:70px;
+    }
+    .size-set div, .hor-ver-set div, .mode-set div {
+        width:176px;
+        height:70px;
+    }
+    .size-set, .hor-ver-set, .mode-set {
+        line-height:70px;
+    }
+    .hor-ver-set div {
+        font-size: 30px;
+    }
+    .mode-set div {
+        width: 110px;
+        font-size:30px;
+        margin-right:18px;
+    }
+    .small-sun {
+        width: 55px;
+    }
+    #playCenter {
+        line-height: 70px;
+    }
+    #knob-range {
+        margin: 30px 0 0 4px;
+        width: 250px;
+    }
+    #narrow{
+        line-height:50px;
+        font-size:38px;
+    }
+    .size-set .right-side {
+        font-size: 48px;
+        line-height: 50px;
+    }
+    #progressbar2 {
+        width: 250px;
+    }
+    #play_knob {
+        top:-10px;
+        width: 34px;
+        height: 34px;
+        border-radius: 17px;
+    }
+    .small-sun{
+        font-size:34px;
+        width:38px;
+    }
+    .big-sun {
+        width: 55px;
+        font-size: 50px;
+    }
+    .fontBtn{
+        width:45px;
+        height:45px;
+    }
+    #categoryShow{
+        font-size: 1.5rem;
+
+    }
+
+    #categoryList{
+        font-size: 1.2rem;
+    }
+    .loginSpan{
+
+    width: auto;
+    position: absolute;
+    right: 10px;
+    top: 105px;
+    font-size: 1.2rem;
+    text-align: right
+    }
+}

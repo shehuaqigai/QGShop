@@ -1,0 +1,6 @@
+/*large phone or pad*/
+@media all
+and (min-height : 1060px)
+and (orientation : landscape) {
+
+}

@@ -1,0 +1,74 @@
+/*pad with high definition, width 1280*/
+@media all
+and (min-width : 1280px)
+and (orientation : portrait) {
+    .tile {
+        width: 276px;
+        height: 276px;
+    }
+
+    .tile2t2 {
+        width: 580px;
+        height: 580px;
+    }
+
+    .tile1t2 {
+        width: 580px;
+        height: 276px;
+    }
+
+    .tile.double, .doubletile {
+        width: 580px;
+    }
+
+    .tile.double-vertical {
+        height: 580px;
+    }
+
+    .tile .tile-content {
+        width: 242px;
+        height: 242px;
+    }
+
+    .tile.image-slider .tile-content{
+        width: 280px;
+        height: 280px;
+    }
+
+    .tile.double .tile-content {
+        width: 528px;
+        height: 242px;
+    }
+	.page .page-region {
+		padding: 38px 0 38px 46px;
+	}
+	.tile.quadro {
+		width: 1188px;
+	}
+    /****************  漫画目录 ******************/
+    .tile-content .content-center>i{
+        font-size:3em;
+        width: 64px;
+        height: 64px;
+        margin-left: -32px;
+        margin-top: -32px;
+    }
+    .tile-content .content-center>.icon-arrow-down{
+        left: 75%;
+    }
+    .tile-quadro{
+        /*2个双格加2个边距*/
+        /*580 * 2 + 20 * 2*/
+        width:1220px;
+        padding-left:20px;
+    }
+    /********************************************/
+	.readBookList {
+		padding-left: 46px;
+	}
+	.tile.onehalf-vertical {
+		height: 377px;
+		width: 377px;
+	}
+}
+

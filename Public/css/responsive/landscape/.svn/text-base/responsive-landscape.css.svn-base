@@ -1,0 +1,228 @@
+/*General landscape*/
+@media all and (orientation : landscape) {
+
+    .dialog-container {
+        width: 35%;
+        height: 52%;
+        display: block;
+        position:relative;
+        overflow: visible;
+        margin: 20% 30% 20% 30%;
+    }
+    .confirm-dialog-container{
+        width: 100%;
+        height: auto;
+        margin: 30% 0 0 0;
+    }
+    /* Styles */
+
+    .catalog-hot-item {
+        -webkit-box-sizing:border-box;
+        box-sizing: border-box;
+        position:relative;
+        width: 98%;
+        height: 140px;
+        margin: 5px 1%;
+        padding: 10px 60px 10px 110px;
+        background-repeat: no-repeat;
+        background-position:0 center;
+        float:left;
+    }
+    .catalog-hot-item .title{
+        margin:5px 0;
+        font-weight: bold;
+    }
+    .catalog-hot-item .author{
+
+    }
+    .catalog-hot-item .intro{
+        margin-top: 10px;
+        height: 40px;
+        line-height:22px;
+        overflow: hidden;
+    }
+    .catalog-hot-item .downloadBook, .catalog-hot-item .readBook, .download-loading, .download-fail{
+        color: white;
+        display: block;
+        font-size: 38px;
+        height: 80px;
+        margin-top: -20px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        width: 40px;
+    }
+    .catalog-sub{
+        font-size: 22px;
+    }
+    .subclass{
+        font-size: 22px;
+    }
+    .searchBook{
+        background-size:90px 110px;
+        left: 6%;
+        width: 87%;
+    }
+    .pagination {
+        left: 1%;
+        width: 87%;
+    }
+    /*漫画样式*/
+    #animechapterScroller ul, #animemarkList,#animebookmarkScroller .markList{
+        margin-left:3.5%;
+        margin-top:15px;
+
+    }
+    #animechapterScroller .icon-arrow-down,#animechapterScroller .icon-play,#animechapterScroller .icon-pause,#animechapterScroller .icon-book,#animechapterScroller .icon-enter,#animechapterScroller .icon-checkmark{
+        width:20%;
+        position:relative;
+        font-size:2rem;
+        top:-50px;
+
+    }
+    #animechapterScroller .icon-arrow-down,#animechapterScroller .icon-play,#animechapterScroller .icon-pause,#animechapterScroller .icon-checkmark{
+        left:71%;
+        height:30px;
+    }
+    #animechapterScroller .icon-book,#animechapterScroller .icon-enter{
+        left:30%;
+        line-height:30px;
+        height:30px;
+
+    }
+    #animebookmarkScroller .icon-cancel,#animebookmarkScroller .icon-enter{
+        position:relative;
+        font-size:2rem;
+        top:-10px;
+        width:20%;
+        height:30px;
+        line-height:30px;
+
+    }
+    #animebookmarkScroller .icon-cancel{
+        left:50%;
+    }
+    #animebookmarkScroller .icon-enter{
+        left:40%;
+    }
+    #AnimeChapterWapper #animeMagazineScroller .icon-checkbox{
+        width:22%;
+        height:30px;
+        line-height:30px;
+        position:relative;
+        top:-50px;
+        left:70%;
+        font-size:2rem;
+    }
+    #animechapterScroller .animeteSeasonIndexList a,#animemarkList li a,#animebookmarkScroller .markList a{
+
+        width:50%;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        font-size: 1rem;
+        margin-left:2%;
+        color:white;
+        margin-top:10px;
+
+    }
+
+/*
+漫画搜索样式
+*/
+    #comicPage .nav-tabs{
+        left:150px;
+    }
+/*login style*/
+	#loginMain{
+	    width:100%;height:100%;z-index:1;position:fixed;left:0px;top:0px;display:none;
+	}
+    #loginMain .floatWindow{
+    width:100%;height:1.7rem;font-size:1rem;color:#FFFFFF;background:#000; border: 1px solid #FFFFFF;border-radius:6px;z-index:10; opacity:0.1;position:absolute;top:0px;left:0px;
+    
+    }
+    #loginMain #title{
+    margin:3px 0px 0px 3px;position:absolute;top:0px;left:0px;font-weight:bold;
+    }
+    #loginMain #remove{
+    
+     position:absolute;top:0px;right:0px;;width:1.5rem;height:1.5rem;z-index:11
+     }
+    #loginMain .titlePanle
+    {
+    width:100%;height:1.5rem;font-size:1rem;color:#FFFFFF; z-index:11; 
+    }
+    #loginMain .LoginChld{
+	left:50%;margin-left:-12rem;width:24rem;font-family: Arial, Helvetica, sans-serif;position:absolute;z-index:1;top:50%;margin-top:-8rem;height:16rem;border: 1px solid #CCCCCC;
+	}
+	#loginMain .loginPanle{
+	margin:auto;width:20rem;
+	}
+	#loginMain input{
+	width:14rem;height:1.2rem;margin-left:0.5rem;float:left;
+	}
+	#loginMain .loginPanle div{
+	margin-top:0.2rem;
+	height:3rem;
+	}
+	#loginMain .loginPanle span{
+     margin-left:0.5rem;
+	 color:#fff;
+	 display:block;
+	 width:4rem;
+	 float:left;
+
+	}
+	#loginMain .BtCode{
+	width: 9rem;
+	height: 3.6rem;
+	float: left;
+	display: inline-block;
+	text-align: center;
+	line-height: 3.6rem;
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+	color: white;
+	border: 2px solid #E2E2E2;
+	
+	background-color: #23346b !important;
+	background: -webkit-linear-gradient(left, #23346b, #2c4184);
+	}
+	#loginMain .BtPsw{
+	width: 9rem;
+	height: 3.6rem;
+	 margin:auto;
+	
+	text-align: center;
+	line-height: 3.6rem;
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+	color: white;
+	border: 2px solid #E2E2E2;
+	
+	background-color: #23346b !important;
+	background: -webkit-linear-gradient(left, #23346b, #2c4184);
+	}
+	#loginMain .BtSub{
+	
+	width: 9rem;
+	height: 3.6rem;
+	float: right;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	line-height: 3.6rem;
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+	color: white;
+	border: 2px solid #E2E2E2;
+	
+	background-color: #23346b !important;
+	background: -webkit-linear-gradient(left, #23346b, #2c4184);
+	}
+	#pswLayer div{
+	 margin-top:1rem;
+	}
+	
+	/*end*/
+}

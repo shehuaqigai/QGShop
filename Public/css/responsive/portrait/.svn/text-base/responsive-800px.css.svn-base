@@ -1,0 +1,178 @@
+
+/*phone with width of 800*/
+/*maybe we should consider phone and pad here*/
+@media all
+and (width : 800px)
+and (orientation : portrait) {
+	html{
+		font-size:14px;
+	}
+    .tile {
+        width: 166px;
+        height: 166px;
+    }
+
+    .tile2t2 {
+        width: 352px;
+        height: 352px;
+    }
+
+    .tile1t2 {
+        width: 352px;
+        height: 166px;
+    }
+
+    .tile.double, .doubletile {
+        width: 352px;
+    }
+    .tile.double-vertical {
+        height: 352px;
+    }
+
+    .tile .tile-content {
+        width: 142px;
+        height: 142px;
+    }
+
+    .tile.image-slider .tile-content{
+        width: 166px;
+        height: 166px;
+    }
+
+    .tile.double .tile-content {
+        width: 328px;
+        height: 142px;
+    }
+    /****************  漫画目录 ******************/
+    .tile-content .content-center>i{
+        font-size:4em;
+        width: 64px;
+        height: 64px;
+        margin-left: -32px;
+        margin-top: -32px;
+        line-height:64px;
+    }
+    .tile-content .content-center>.icon-arrow-down{
+        left: 75%;
+    }
+    .tile-quadro{
+        /*2个双格加2个边距*/
+        /*352 * 2 + 20 * 2*/
+        width:744px;
+        padding-left:20px;
+    }
+    /********************************************/
+    .dialog-container {
+        width: 49.5%;
+        height: 33.5%;
+        display: block;
+        position:relative;
+        overflow: visible;
+        margin: 25% 25% 25% 25%;
+    }
+    .battery
+    {
+        bottom:0px;
+        position:absolute;
+        left:0px;
+        z-index:2;
+    }
+    .dcSize {
+        bottom:12px;
+        position:absolute;
+        left:60px;
+        color:#006934;
+    }
+
+    #curTime
+    {
+        bottom:15px;
+        position:absolute;
+        left:15px;
+        font-size:0.75rem;
+        color:#006934;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav {
+        width: 64.5%;
+        display: inline-block;
+        position: relative;
+        padding: 0 1%;
+        font-size: 20px;
+        line-height: 30px;
+        float: left;
+        margin: 0 0 0 10px;
+    }
+    .catalog-items{
+        width: 100%;
+        height:auto;
+        display: block;
+        position: relative;
+    }
+    .catalog-items .catalog-container{
+        display: block;
+        position: relative;
+        padding: 0 1%;
+
+        margin:0 0 0 5px;
+        left: 30px;
+    }
+    .catalog-item {
+        line-height: 30px;
+        display: block;
+        position: relative;
+        margin: 0 20px;
+        font-size: 20px;
+        float: left;
+    }
+    .catalog-hot-tab{
+        height: 100%;
+        display: block;
+        position: relative;
+        padding: 0 1%;
+        margin:0 0 0 3px;
+        left: 0px;
+    }
+    .catalog-hot-tab-header .header-title{
+        font-size: 20px;
+        float: left;
+        left: 50px;
+        position: relative;
+        display: block;
+
+    }
+    .catalog-hot-tab-content {
+        width: 100%;
+        height: 100%;
+        height: 170px;
+        left: 50px;
+        position: relative;
+        display: block;
+        -webkit-box-sizing: border-box;
+    }
+    .catalog-hot-tab-content .catalog-tab-content-item {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 3px;
+        position: relative;
+        float: left;
+        -webkit-box-sizing: border-box;
+    }
+	.readBookList {
+		padding-left: 38px;
+	}
+	.tile.quadro {
+		width: 723px;
+	}
+	.page .page-header .page-header-content h1{
+		top:56px;
+		font-size:2.4rem;
+	}
+	.tile .tile-content p {
+		line-height: 1.6rem;
+		height: 6.4rem;
+	}
+    .deleteBtn{
+        font-size: 1.6rem;
+    }
+}

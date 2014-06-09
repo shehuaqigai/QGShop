@@ -1,0 +1,92 @@
+@media all
+and (min-width : 1280px)
+and (max-width : 1365px)
+and (orientation : landscape) {
+    .page .page-header .page-header-content .logo {
+        left: 80px;
+    }
+    .page .page-header .page-header-content .user-login {
+        float: left;
+        margin: 55px 0px 0 904px;
+    }
+    .page .page-region {
+        padding: 0 2px 24px 77px;
+    }
+    .dialog-container {
+        width: 27%;
+        height: 48%;
+        display: block;
+        position:relative;
+        overflow: visible;
+        margin: 20% 30% 20% 30%;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav {
+        width: 64.5%;
+        display: inline-block;
+        position: relative;
+        padding: 0 1%;
+        font-size: 22px;
+        line-height: 30px;
+        float: left;
+        margin: 0 0 0 10px;
+    }
+    .catalog-items{
+        width: 100%;
+        height:auto;
+        display: block;
+        position: relative;
+    }
+    .catalog-items .catalog-container{
+        display: block;
+        position: relative;
+        padding: 0 1%;
+
+        margin:0 0 0 5px;
+        left: 30px;
+    }
+    .catalog-item {
+        line-height: 30px;
+        display: block;
+        position: relative;
+        margin: 0 20px;
+        font-size: 22px;
+        float: left;
+    }
+    .catalog-hot-tab{
+        height: 100%;
+        display: block;
+        position: relative;
+        padding: 0 1%;
+        margin:0 0 0 3px;
+        left: 0px;
+    }
+    .catalog-hot-tab-header .header-title{
+        font-size: 22px;
+        float: left;
+        left: 100px;
+        position: relative;
+        display: block;
+
+    }
+    .catalog-hot-tab-content {
+        width: 100%;
+        height: 100%;
+        height: 170px;
+        left: 100px;
+        position: relative;
+        display: block;
+        -webkit-box-sizing: border-box;
+    }
+    .catalog-hot-tab-content .catalog-tab-content-item {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 3px;
+        position: relative;
+        float: left;
+        -webkit-box-sizing: border-box;
+    }
+    .input-control.checkbox .helper {
+        font-size: 22px;
+    }
+}

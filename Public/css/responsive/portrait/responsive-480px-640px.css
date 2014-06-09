@@ -1,0 +1,11 @@
+/*******************/
+/*android 2.3 phone*/
+/*******************/
+
+/*most old phone width is 480*/
+@media all
+and (min-width : 480px)
+and (max-width : 640px)
+and (orientation : portrait) {
+
+}

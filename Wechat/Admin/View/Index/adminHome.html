@@ -1,0 +1,73 @@
+        <include file="./Wechat/Common/TplLayout/header.html" title="微商城后台管理"/>
+        <!--加载jquery日历插件样式-->
+        <link href="__CSS__/lib/jquery.datetimepicker.css" rel="stylesheet"/>
+        <!--加载文件上传样式-->
+        <link rel="stylesheet" href="__CSS__/lib/plupload/css/queue.css" type="text/css" media="screen" />
+         <!--对话框插件样式-->
+        <link rel="stylesheet" href="__CSS__/lib/Dialog/flat/zebra_dialog.css" type="text/css">
+        <!--加载-各个视图样式-->
+        <link href="__CSS__/custom/admin.css" rel="stylesheet"/>
+        <link href="__CSS__/custom/wechatSet.css" rel="stylesheet"/>
+        <link href="__CSS__/custom/adminManage.css" rel="stylesheet"/>
+        <link href="__CSS__/custom/commodityManage.css" rel="stylesheet"/>
+        <link href="__CSS__/custom/otherSetting.css" rel="stylesheet"/>
+        <link href="__CSS__/custom/tradeManage.css" rel="stylesheet"/>
+        <link href="__CSS__/custom/customMenu.css" rel="stylesheet"/>
+        <link href="__CSS__/custom/wechatUserManage.css" rel="stylesheet"/>
+        </head>
+    <body>
+        <div id="adminPage"></div>
+        <script>
+                /**
+                 *dom的操作全部交给js来处理
+                 * 前端采用mvc的前端架构
+                 * 为了可维护，可扩展，采用mvc开发
+                 * 采用build工具打包
+                 * 整个应用全局变量就一个ADMIN
+                 * 其他的必须放入闭包里
+                 * @type {{}}
+                 */
+            var ADMIN={};//后台应用
+                ADMIN.M={};//模型层
+                ADMIN.V={};//视图层
+                ADMIN.C={};//控制器层
+                ADMIN.tpl={};//模板
+                ADMIN.global={}//对象之间交互用到的变量都放入这个容器里
+                ADMIN.global.APPPATH="__ROOT__/";//网站的跟路径
+                ADMIN.global.ADMINPATH="__ROOT__/index.php/Admin/";//后台模块admin的根路径
+                ADMIN.global.mixData={};
+        </script>
+        <include file="./Wechat/Common/TplLayout/footer.html" />
+        <!--加载模板文件 start-->
+        <script src="__JS__/template/admin.tpl.js"></script>
+        <script src="__JS__/template/customMenu.tpl.js"></script>
+        <script src="__JS__/template/wechatSet.tpl.js"></script>
+        <script src="__JS__/template/wechatUserManage.tpl.js"></script>
+        <script src="__JS__/template/adminManage.tpl.js"></script>
+        <script src="__JS__/template/commodityManage.tpl.js"></script>
+        <script src="__JS__/template/otherSetting.tpl.js"></script>
+        <script src="__JS__/template/tradeManage.tpl.js"></script>
+        <!--加载模型文件 start-->
+        <script src="__JS__/model/adminModel.js"></script>
+        <script src="__JS__/model/customMenuModel.js"></script>
+        <script src="__JS__/model/wechatSetModel.js"></script>
+        <script src="__JS__/model/wechatUserManageModel.js"></script>
+        <script src="__JS__/model/adminManageModel.js"></script>
+        <script src="__JS__/model/commodityManageModel.js"></script>
+        <script src="__JS__/model/otherSettingModel.js"></script>
+        <script src="__JS__/model/tradeManageModel.js"></script>
+        <!--加载视图文件 start-->
+        <script src="__JS__/view/customMenuView.js"></script>
+        <script src="__JS__/view/wechatSetView.js"></script>
+        <script src="__JS__/view/wechatUserManageView.js"></script>
+        <script src="__JS__/view/adminView.js"></script>
+        <script src="__JS__/view/adminManageView.js"></script>
+        <script src="__JS__/view/commodityManageView.js"></script>
+        <script src="__JS__/view/otherSettingView.js"></script>
+        <script src="__JS__/view/tradeManageView.js"></script>
+        <!--加载控制器文件 start-->
+        <script src="__JS__/controller/adminController.js"></script>
+        <!--加载启动文件 start-->
+        <script src="__JS__/bootstrap/admin.js"></script>
+    </body>
+</html>

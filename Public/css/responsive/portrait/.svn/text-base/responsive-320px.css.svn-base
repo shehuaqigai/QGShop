@@ -1,0 +1,684 @@
+/*touch5 ...*/
+@media screen
+and (device-width: 320px)
+and (device-height: 568px)
+and (-webkit-device-pixel-ratio: 2){
+
+    .page .page-header .page-header-content h1, .page .page-header .page-header-content h2, .page .page-header .page-header-content h3, .page .page-header .page-header-content h4, .page .page-header .page-header-content h5{
+        font-size: 24px;
+
+    }
+    .bookClub .bd{
+        margin-top:40px;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav{
+        font-size: 12px;
+        height: 30px;
+        overflow: hidden;
+        line-height: 30px;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav span{
+        font-size: 12px;
+    }
+    .dialog-container {
+        width: 54%;
+        display: block;
+        position: relative;
+        overflow: visible;
+        margin: 40% 20% 20% 20%;
+    }
+    .page h3{
+        font-size: 12px;
+    }
+    .confirm-dialog-container{
+        width: 100%;
+        margin: 65% 0 0 0;
+        height: auto;
+    }
+    .searchForm .searchBtn {
+        height: 2.6rem;
+    }
+    .searchBook .title,.searchBook .author {
+        width: 160px;
+        overflow: hidden;
+        text-wrap: none;
+        text-overflow: ellipsis;
+        height: 15px;
+        line-height: 15px;
+    }
+
+}
+
+@media all
+and (width:320px)
+and (orientation : portrait){
+        html {
+            overflow-y: scroll;
+            font-size: 12px;
+        }
+        .portrait .pageWrap {
+            right: 20px;
+        }
+        .page .page-header .page-header-content {
+            height: 72px;
+        }
+    .tile-group-title{
+        margin:0px;padding:0px;height:0px;line-height:0px;
+    }
+
+    .common-dialog-show{
+        background:rgba(0,0,0,0.7);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        -webkit-transition: all 0s;
+        -moz-transition: all 0s;
+        transition: all 0s;
+    }
+
+
+
+        .page .page-header .page-header-content .logo {
+            left: 14px;
+            top: 0px;
+            width: 160px;
+            height: 80px;
+        }
+        .page .page-header .page-header-content .user-login {
+            margin: 12px 16px 0 0;
+        }
+
+        .page .page-region {
+            padding: 0 2px 0px 10px;
+        }
+        
+        .bookClub .rightBtn {
+            top: 20px;
+            font-size: 32px;
+            right: 0px;
+        }
+        .bookClub h1.searchH1 {
+            font-size: 1.8rem;
+        }
+        .searchResultBlock {
+            margin: 0 0px 8px 0;
+        }
+        .loginSpan{
+            top:73px;
+        }
+        /****************  漫画目录 ******************/
+        .tile-content .content-center>i{
+            font-size:2em;
+            width: 40px;
+            height: 40px;
+            margin-left: -20px;
+            margin-top: -20px;
+            line-height:40px;
+        }
+        .tile-content .content-center>.icon-arrow-down,.tile-content .content-center>.icon-enter{
+            left: 75%;
+        }
+        .tile-quadro{
+            /*2个双格加2个边距*/
+            /*336 * 2 + 20 * 2*/
+            width:310px;
+            padding-left:10px;
+        }
+        /********************************************/
+        .tile {
+            width: 69px;
+            height: 69px;
+            margin: 0 8px 8px 0;
+        }
+        .tile.quadro {
+            width: 300px;
+        }
+        .tile.onehalf {
+            width: 93px;
+        }
+        
+        .tile.onehalf-vertical {
+            height: 93px;
+        }
+        .tile.twothird-vertical {
+            height: 165px;
+        }
+        .tile2t2 {
+            margin: 0 8px 8px 0;
+            width: 146px;
+            height: 146px;
+        }
+
+        .tile1t2 {
+            margin: 0 8px 8px 0;
+            width: 146px;
+            height: 69px;
+        }
+
+        .tile.double, .doubletile {
+            width: 146px;
+            margin: 0 8px 8px 0;
+        }
+
+        .tile.double-vertical {
+            height: 146px;
+        }
+
+        .tile .tile-content {
+            width: 58px;
+            height: 58px;
+            padding: 4px;
+        }
+        .tile.image-slider .tile-content{
+            width: 64px;
+            height: 64px;
+        }
+        .tile.double .tile-content {
+            width: 132px;
+            height: 58px;
+            padding: 4px;
+        }
+
+        .tile.double-vertical h1.tileIcon {
+            font-size: 48px;
+            line-height: 48px;
+            margin-top: 30px;
+        }
+
+        .tile h1.tileIcon{
+            font-size: 32px;
+            line-height: 32px;
+            margin-top: 8px;
+        }
+
+        .tile .brand > .name, .tile .tile-status > .name {
+            margin-bottom: 2px;
+            margin-left: 5px;
+            text-overflow: ellipsis;
+        }
+        .helpNav.tile .brand > .name, .tile .tile-status > .name {
+            font-size: 0.85rem;
+        }
+        .tile .brandIcon {
+            line-height: 24px;
+        }
+        .tile .brandInfo {
+            line-height: 24px;
+        }
+        .bg-readback {
+            background-position: left -20px;
+        }
+
+        .bookClub .backBtn {
+            width: 44px;
+            height: 44px;
+            left: 4px;
+            top: 20px;
+            font-size: 36px;
+        }
+
+        .page .page-header .page-header-content h1 {
+            left: 60px;
+            top:28px;
+        }
+    .tile .brand > .title{
+        width:52%;
+    }
+    #readPage .bookClub .rightBtn{
+        width:44px;
+        height:44px;
+        font-size:36px;
+        top:17px;
+    }
+        .bookClub h1 {
+            line-height: 2.2rem;
+            font-size: 2.2rem;
+        }
+        .page .page-header .page-header-content h1, .page .page-header .page-header-content h2, .page .page-header .page-header-content h3, .page .page-header .page-header-content h4, .page .page-header .page-header-content h5 {
+            bottom: 0.9rem;
+        }
+        .page .page-header .page-header-content h1.onlyTitle{
+            bottom: 1.2rem;
+        }
+        #readPage .bd {
+            margin-top: 0px;
+        }
+    #readPage .page-header .page-header-content .page-title {
+    }
+        .searchForm {
+            width: 80%;
+            margin-left: 60px;
+            margin-top: 10px;
+        }
+        .readPage .deleteBtn {
+            height: 32px;
+        }
+        .deleteBtn {
+            font-size:1.4rem;
+        }
+        .page .pageContent {
+            margin-left: 20px; 
+        }
+        .rank-item-double{
+            width:130px;
+            height: 40px;
+            margin:10px 5px;
+            font-size: 15px;
+            display: block;
+            position: relative;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            -webkit-box-sizing: border-box;
+        }
+        .rank-item-single{
+            width: 60px;
+            height: 40px;
+            margin:10px 5px;
+            font-size: 15px;
+            display: block;
+            position: relative;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            -webkit-box-sizing: border-box;
+        }
+        .bookTitle {
+            display:none;
+        }
+        .chapterNav {
+            margin: 0;
+        }
+        .dialog-container {
+            width: 51%;
+            height: 38%;
+            display: block;
+            position: relative;
+            overflow: visible;
+            margin: 40% 20% 20% 20%;
+        }
+
+        .shareBtn {
+            display: block;
+            position:absolute;
+            left:0px;
+            bottom:0px;
+            width:28px;
+            height:28px;
+            text-align:center;
+            line-height:18px;
+            font-size:18px;
+        }
+        .dialog-container {
+            width: 52%;
+            height: 38%;
+            display: block;
+            position:relative;
+            overflow: visible;
+            margin: 30% 20% 30% 20%;
+        }
+        .tile-share-icon {
+            width: 60px;
+            font-size: 35px;
+            text-align: center;
+            line-height: 40px;
+            vertical-align: middle;
+            height: 40px;
+            padding: 0px;
+        }
+        .tile-share-text {
+            width: 100%;
+            height: 25px;
+            font-size: 0.8rem;
+            bottom: 0px;
+            left: 0px;
+            position: absolute;
+            text-align: center;
+        }
+
+
+        .readPage .delBtn {
+            color:#ff0000;
+            display: none;
+            position:absolute;
+            right:5px;
+            top:0px;
+            width:20px;
+            height:20px;
+            text-align:center;
+            line-height:18px;
+            font-size:18px;
+        }
+
+        .metro-confirm-button{
+            width:80px;
+            height:30px;
+            float: right;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+            color: white;
+            border: 2px solid #E2E2E2;
+            margin:0 15px 0 0;
+
+        }
+        .metro-confirm-row{
+            width:96%;
+            min-height:35px;
+            font-size: 16px;
+            display: block;
+            position: relative;
+            float: left;
+            padding: 7px 2%;
+            color: #ffffcc;
+        }
+        .confirm-dialog-container{
+            width: 100%;
+            height: auto;
+            margin: 60% 0 0 0;
+        }
+        .breadcrumbNav{
+            width: 100%;
+            height:30px;
+            display: block;
+            position: relative;
+        }
+        .breadcrumbNav .breadcrumbNav-container .nav {
+            width: 64.5%;
+            display: inline-block;
+            position: relative;
+            padding: 0 1%;
+            font-size: 15px;
+            line-height: 30px;
+            float: left;
+            margin: 0 0 0 10px;
+        }
+        .breadcrumbNav .breadcrumbNav-container .nav span{
+            font-size: 15px;
+        }
+        .check_icon_select{
+            height: 16px;
+            width: 16px;
+            display: block;
+            left: 0;
+            top: 8px;
+            z-index: 1;
+            background-size: 100% 100%;
+            position: absolute;
+        }
+
+        .check_icon_selected{
+            height: 16px;
+            width: 16px;
+            display: block;
+            left: 0;
+            top: 8px;
+            z-index: 1;
+            background-size: 100% 100%;
+            position: absolute;
+        }
+        .breadcrumbNav .breadcrumbNav-container label{
+            width: 30%;
+            -webkit-box-sizing: border-box;
+            display: block;
+            position: relative;
+            font-size: 30px;
+            letter-spacing: 0.02em;
+            float: left;
+        }
+
+        .input-control.checkbox .helper {
+            padding-left: 18px;
+            position: relative;
+            font-size: 12px;
+            line-height: 12px;
+            padding-top: 3px;
+        }
+        .catalog-container{
+            display: block;
+            position: relative;
+            padding: 0 1%;
+            font-size: 18px;
+            line-height: 50px;
+            margin:0 0 0 15px;
+        }
+        .catalog-items{
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+        }
+
+        .catalog-hot-tab{
+            height: 100%;
+            display: block;
+            position: relative;
+            padding: 0 1%;
+            margin:0 0 0 3px;
+        }
+
+        .catalog-hot-tab-header .header-title{
+            font-size: 12px;
+            float: left;
+            line-height: 15px;
+            position: relative;
+            display: block;
+            margin: 0;
+        }
+        .catalog-hot-tab-item{
+            line-height: 30px;
+            font-size: 12px;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+            margin:0 2px;
+        }
+        .catalog-hot {
+            width: 100%;
+            display: block;
+            position: relative;
+        }
+        .catalog-hot-tab-content {
+            width: 100%;
+            height: auto;
+            line-height: 30px;
+            font-size: 18px;
+            height: 170px;
+            position: relative;
+            display: block;
+            left: 20px;
+            -webkit-box-sizing: border-box;
+        }
+
+        .catalog-hot-tab-content .catalog-tab-content-item {
+            width: 100%;
+            height: auto;
+            display: block;
+            padding: 3px;
+            position: relative;
+            float: left;
+            -webkit-box-sizing: border-box;
+        }
+        .catalog-item {
+            line-height: 30px;
+            font-size: 15px;
+            display: block;
+            position: relative;
+            margin: 0 3px;
+            float: left;
+        }
+        .catelogPage .searchBook {
+            -webkit-box-sizing:border-box;
+            box-sizing: border-box;
+            position:relative;
+            background-size: 70px 90px;
+            width: 97%;
+            left: 2%;
+            height: 110px;
+            margin: 10px;
+            padding: 10px 60px 10px 80px;
+            background-repeat: no-repeat;
+            background-position:0 center;
+            float:left;
+        }
+        .catelogPage .searchBook .title {
+            font-weight: bold;
+            line-height: 13px;
+            font-size: 12px;
+            width: 150px;
+        }
+        .catelogPage .searchBook .author {
+            line-height: 13px;
+            font-weight: bold;
+            font-size: 12px;
+            width: 150px;
+        }
+        .catelogPage .searchBook .intro {
+            line-height: 13px;
+            font-weight: bold;
+            font-size: 10px;
+            width: 140px;
+            overflow: hidden;
+        }
+        .searchPage .searchBook {
+            -webkit-box-sizing:border-box;
+            box-sizing: border-box;
+            position:relative;
+            background-size: 70px 90px;
+            width: 92%;
+            left: 2%;
+            height: 110px;
+            margin: 10px;
+            padding: 10px 60px 10px 80px;
+            background-repeat: no-repeat;
+            background-position:0 center;
+            float:left;
+        }
+        .searchPage .searchBook .title {
+            font-weight: bold;
+            line-height: 13px;
+            font-size: 12px;
+            width: 200px;
+        }
+        .searchPage .searchBook .author {
+            line-height: 13px;
+            font-weight: bold;
+            font-size: 12px;
+            width: 200px;
+        }
+        .searchPage .searchBook .intro {
+            line-height: 13px;
+            font-weight: bold;
+            font-size: 10px;
+            width: 180px;
+            overflow: hidden;
+        }
+        .battery
+        {
+            bottom:12px;
+            position:absolute;
+            left:0px;
+            z-index:2;
+        }
+        .dcSize {
+            bottom:12px;
+            position:absolute;
+            left:45px;
+            color:#006934;
+        }
+
+        #curTime
+        {
+            bottom:15px;
+            position:absolute;
+            left:15px;
+            font-size:0.75rem;
+            color:#006934;
+        }
+        #alertMsgInfo {
+            height: 100px;
+            top:60%;
+        }
+        #alertMsgInfoButton,#alertMsgInfoButton2{
+            top:30%;
+        }
+        .catalog-sub{
+            font-size: 15px;
+        }
+        .subclass{
+            font-size: 15px;
+        }
+        .ranklist-item-content {
+            padding: 0 0 0 50px;
+        }
+        .ranklist-item {
+            margin: 10px 5px;
+            height: 105px;
+        }
+        .ranklist-item-image {
+            left: 5px;
+            height: 80px;
+            width: 50px;
+            background-size: 99.9% 100%;
+        }
+        .ranklist-item-title{
+            font-size: 14px;
+            height: 30px;
+            line-height: 16px;
+            padding: 5px 10px;
+            display: block;
+            position: relative;
+        }
+        .ranklist-item-decription{
+            font-size: 12px;
+            height: 45px;
+            line-height: 15px;
+            padding: 0 10px;
+            display: block;
+            position: relative;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-wrap: none;
+        }
+        
+        .pagination {
+            clear: both;
+            margin: 0px;
+            padding-top: 30px;
+            position: relative;
+            width: 100%;
+        }
+
+        .pagination .nextPage,.pagination .backPage{
+            width: 28px;
+            height: 15px;
+            margin: 5px;
+            padding: 7px;
+        }
+        .pagination .flag {
+            padding: 1px;
+            right: 3px;
+
+        }
+		.icon-book,.icon-cancel{
+			font-size:2rem;
+			float:left;
+			padding:0.8rem 0 0 0.6rem;
+		}
+		.icon-arrow-down,.icon-enter,.icon-checkbox,.icon-pause,.icon-play{
+			font-size:2rem;
+			padding:0.8rem 0.6rem 0 0;
+			float:right;
+		}
+        .deleteBookmarkBtn {
+            top:auto;
+        }
+        .chapterListBtn {
+            width: 58px;
+        }
+}

@@ -1,0 +1,11 @@
+/*******************/
+/*android 4 phone*/
+/*******************/
+
+/*most morden phone width exceed 720. this is for just 720*/
+@media all
+and (min-width : 641px)
+and (orientation : portrait) {
+
+
+}

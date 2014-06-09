@@ -1,0 +1,280 @@
+@media all
+and (min-width : 1920px)
+and (orientation : landscape)
+and (-webkit-device-pixel-ratio: 3){
+    html{
+        font-size: 35px;
+    }
+    .bookClub h1 {
+        line-height: 24pt;
+
+    }
+    .page .page-region {
+
+        padding: 0 2px 24px 80px;
+    }
+    .page .page-region .page-region-content {
+        padding-top: 0px;
+    }
+    .tile-group {
+        width: 1800px;
+        height: 480px;
+    }
+    .tile.double {
+        width: 590px;
+    }
+    .tile2t2, .tile1t2, .tile2t1 {
+        width: 590px;
+        height: 590px;
+    }
+    .tile.double-vertical {
+        height: 590px;
+    }
+    .tile {
+        font-size: 2.5rem;
+        width: 290px;
+        height: 290px;
+    }
+    .tile.image-slider .tile-content {
+        width: 290px;
+        height: 290px;
+    }
+    .tile .brand  > .name,
+    .tile .tile-status  > .name {
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        color: #ffffff;
+    }
+    .tile h1.tileIcon{
+        font-size: 150px;
+        line-height: 150px;
+        margin-top: 50px;
+    }
+    .page h3 {
+        font-size: 2.1rem;
+    }
+    .tile .brand,
+    .tile .tile-status {
+        min-height: 40px;
+
+    }
+    .tile .brandIcon{
+        font-size: 40px;
+
+    }
+    .bookClub .bd {
+        margin: 50px;
+        line-height: 40px;
+    }
+    .bookClub .backBtn {
+        display: block;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 30px;
+        top: 28px;
+        font-size: 65px;
+        background: none;
+        color: #fff;
+    }
+    .page .page-header .page-header-content h1 small {
+        font-size: 2rem;
+
+    }
+    .searchForm input[name="keyword"] {
+        font-size: 2.25rem;
+        display: block;
+        position: absolute;
+        padding: 0 5px;
+        height: 3.5rem;
+        left: 0;
+        right: 4.5rem;
+        top: 2px;
+        bottom: 0;
+        border: 1px solid #ddd;
+    }
+    .searchForm .searchBtn {
+        width: 4rem;
+        height: 3.7rem;
+    }
+    .searchForm .icon-search {
+        font-size: 2.6rem;
+        line-height: 1.6rem;
+        margin-top: 0.7rem;
+        text-shadow: 1px 1px 2px #666;
+    }
+    .searchBook .title {
+
+        font-size: 34px;
+
+    }
+    .searchBook .author {
+
+        font-size: 32px;
+
+    }
+    .searchBook .intro {
+        height: 45px;
+        font-size: 25px;
+
+    }
+    .page body, .page p {
+        font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        font-size: 2rem;
+        letter-spacing: 0.02em;
+        line-height: 1.25rem;
+    }
+    .pagination {
+       font-size: 35px;
+    }
+    .pagination .nextPage,.pagination .backPage{
+        width: 60px;
+        height: 30px;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav {
+        display: inline-block;
+        font-size: 38px;
+        line-height: 50px;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        width: 65%;
+    }
+    .input-control.checkbox .helper {
+        font-size: 38px;
+        line-height: 26px;
+        padding-left: 28px;
+        padding-top: 3px;
+        position: relative;
+    }
+    .catalog-item {
+        display: inline-block;
+        float: left;
+        font-size: 36px;
+        line-height: 30px;
+        margin: 10px;
+        position: relative;
+    }
+    .catalog-hot-tab-header .header-title {
+        display: inline-block;
+        float: left;
+        font-size: 38px;
+        line-height: 40px;
+        margin-right: 15px;
+    }
+    .catalog-sub{
+        font-size: 34px;
+    }
+    .subclass{
+        font-size: 34px;
+    }
+    #searchResult{
+        top: 10px;
+    }
+    .rank-item-double {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        font-size: 40px;
+        height: 100px;
+        line-height: 100px;
+        margin: 30px;
+        position: relative;
+        text-align: center;
+        width: 500px;
+    }
+    .rank-item-single {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        font-size: 40px;
+        height: 100px;
+        line-height: 100px;
+        margin: 30px;
+        position: relative;
+        text-align: center;
+        width: 220px;
+    }
+    .bookListBtn {
+
+        height: 56px;
+        left: 10px;
+        width: 78px;
+    }
+    .continueBtn {
+        height: 56px;
+        left: 98px;
+        width: 78px;
+    }
+    .fontBtn {
+        width: 45px;
+        height: 45px;
+        background: url(../images/fontBtn.png) no-repeat center 12%;
+        background-size: 100% 100%;
+        right: 91px;
+    }
+    .bookmarkBtn {
+        width: 45px;
+        height: 60px;
+        background: url(../images/bookmarkBtn.png) no-repeat 10px 0px;
+        background-size: auto 75%;
+        right: 15px;
+    }
+    .bookmarks {
+        background: url(../images/bookmarks.png) no-repeat 0 0;
+        width: 37px;
+        height: 88px;
+        position: absolute;
+        right: 5px;
+        top: -48px;
+        opacity: 0;
+        z-index: 9999;
+        pointer-events: none;
+        -webkit-transition-duration: 0.5s;
+    }
+    .testPara {
+        font-size: 34px;
+    }
+    .leftFlag {
+        bottom: 15px;
+        color: #006934;
+        font-size: 1.5rem;
+        left: 10%;
+        position: absolute;
+        text-align: left;
+        z-index: 200;
+    }
+    .rightFlag {
+        bottom: 15px;
+        color: #006934;
+        font-size: 1.5rem;
+        position: absolute;
+        right: 10%;
+        text-align: right;
+        z-index: 200;
+    }
+    .chapterListBtn {
+
+        border-radius: 6px;
+        height: 56px;
+        left: 98px;
+        width: 78px;
+    }
+    .titleArea .titleInChapter {
+        font-size: 2.35rem;
+    }
+    #curTime {
+        font-size: 1.5rem;
+    }
+    .dcSize {
+        font-size: 1.5rem;
+        left: 90px;
+    }
+}

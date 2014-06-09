@@ -1,0 +1,247 @@
+/*some android 2.3 phone, width is 540, mostly motorola*/
+@media all
+and (width : 540px)
+and (orientation : portrait) {
+    html{
+        overflow-y: scroll;
+    }
+       #catelogPage{
+           overflow-x:hidden;
+       }
+    .bookClub h1{top:50px;}
+    .bookClub .rightBtn{top:37px;}
+    .tile {
+        width: 114px;
+        height: 114px;
+    } 
+    .tile2t2 {
+        width: 240px;
+        height: 240px;
+    }
+
+    .tile1t2 {
+        width: 240px;
+        height: 114px;
+    }
+    /****************  漫画目录 ******************/
+    .tile-content .content-center>i{
+        font-size:2.5em;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px;
+        line-height:50px;
+        text-align: center;
+    }
+    .tile-content .content-center>.icon-arrow-down,.tile-content .content-center>.icon-enter{
+        left: 75%;
+    }
+    .tile-quadro{
+        /*2个双格加2个边距*/
+        /*240 * 2 + 20 * 2*/
+        width:520px;
+        padding-left:24px;
+    }
+    /********************************************/
+    .page .page-region .page-region-content{
+        padding-bottom:0px;
+        padding-top:0px;
+    }
+    .page .page-region .page-region-content .tile.quadro{
+        width:490px;
+    }
+    .tile.double, .doubletile {
+        width: 240px;
+    }
+
+    .tile.double-vertical {
+        height: 240px;
+    }
+
+    .tile .tile-content {
+        width: 98px;
+        height: 98px;
+    }
+
+    .tile.image-slider .tile-content{
+        width: 114px;
+        height: 114px;
+    }
+    .tile-group-title{
+        margin:0px;padding:0px;height:0px;line-height:0px;
+    }
+    .tile.double .tile-content {
+        width: 224px;
+        height: 98px;
+    }
+    .tile-share-icon {
+        font-size: 70px;
+        text-align: center;
+        line-height: 55px;
+        vertical-align: middle;
+        height: 70px;
+        padding: 0px;
+        width: 100%;
+        margin-top:10px;
+
+    }
+    .catalog-hot-tab-content{
+        left:40px;
+        height: auto;
+    }
+
+    .tile-share-text {
+        width: 100%;
+        height: 25px;
+        font-size: 0.8rem;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        text-align: center;
+    }
+    .dialog-container {
+        width: 53%;
+        height: 32%;
+        display: block;
+        position:relative;
+        overflow: visible;
+        margin: 30% 20% 30% 20%;
+    }
+    .searchBook .title {
+
+        font-weight: bold;
+        line-height: 17px;
+        font-size: 18px;
+    }
+    .searchBook .author {
+        line-height: 16px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .searchBook .intro {
+        line-height: 15px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .subclass{
+        font-size: 26px;
+    }
+
+    .breadcrumbNav .breadcrumbNav-container .nav {
+        width: 64.5%;
+        display: inline-block;
+        position: relative;
+        padding: 0 1%;
+        font-size: 26px;
+        line-height: 30px;
+        float: left;
+        margin: 0 0 0 10px;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav span{
+        font-size: 26px;
+    }
+    .input-control.checkbox .helper {
+        padding-left: 20px;
+        position: relative;
+        font-size: 22px;
+        line-height: 26px;
+        padding-top: 3px;
+    }
+    .catalog-items{
+        width: 100%;
+        height:auto;
+        display: block;
+        position: relative;
+    }
+    input-control.checkbox {
+        cursor: pointer;
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+    .catalog-container{
+        display: block;
+        position: relative;
+        padding: 0 1%;
+        font-size: 26px;
+        line-height: 60px;
+        margin:0 0 0 30px;
+    }
+    .catalog-sub{
+        font-size: 26px;
+
+    }
+    .catalog-item{
+        line-height: 30px;
+        font-size: 26px;
+        display: inline-block;
+        position: relative;
+        margin: 7px 8px 4px 0px;
+    }
+    catalog-hot-tab-header{
+
+        line-height: 50px;
+
+    }
+    .catalog-hot-tab-header .header-title{
+        display: inline-block;
+        float: left;
+        line-height: 30px;
+        font-size: 24px;
+        margin-right: 15px;
+    }
+    .catalog-hot-tab-content{
+        width: 100%;
+        height: auto;
+        line-height: 50px;
+        font-size: 24px;
+        position: relative;
+        display: block;
+        -webkit-box-sizing: border-box;
+    }
+    .page .pageContent{
+        margin-left: 60px;
+    }
+	.tile.onehalf {
+		width: 156px;
+	}
+	.tile.onehalf-vertical {
+		height: 156px;
+	}
+	.tile .tile-content p {
+		line-height: 1rem;
+		height: 3rem;
+	}
+}
+@media all
+and (width : 540px)
+and (orientation : portrait) and (device-pixel-ratio :1.5){
+    .tile-share-icon {
+        font-size: 65px;
+        text-align: center;
+        line-height: 65px;
+        vertical-align: middle;
+        height: 65px;
+        padding: 0px;
+        width: 100%;
+    }
+    .tile-share-text {
+        width: 100%;
+        height: 40px;
+        font-size: 0.8rem;
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        text-align: center;
+    }
+    .dialog-container {
+        width: 56%;
+        height: 50%;
+        display: block;
+        position:relative;
+        overflow: visible;
+        margin: 40% 0% 0% 30%;
+    }
+
+}

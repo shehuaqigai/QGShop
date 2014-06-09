@@ -1,0 +1,17 @@
+/*---------------*/
+/*-----Phones----*/
+/*---------------*/
+/*iphone 3*/
+@media all
+and (width : 360px)
+and (orientation : portrait) {
+
+
+}
+/*iphone 4*/
+@media all
+and (max-device-width : 399px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio : 2.0){
+
+}

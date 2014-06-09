@@ -1,0 +1,219 @@
+
+/*phone with width of 768*/
+@media all
+and (width : 768px)
+and (orientation : portrait) {
+    html{
+        font-size: 14px;
+    }
+    .bookClub .backBtn ,.bookClub .closeBtn{
+        left: 25px;
+    }
+    .bookClub h1{
+		line-height:normal;
+		top:52px;
+	}
+	.searchForm {
+        margin-left: 100px;
+    }
+    .page .page-header .page-header-content {
+        height: 112px;
+    }
+    .page .page-header .page-header-content h1{
+		height: 54px;
+		line-height: 54px;
+		top: 40px;
+		left:100px;
+		overflow: hidden;
+		font-size: 2.4rem
+	}
+    .page .page-region {
+        padding: 28px 0 38px 38px;
+    }
+    .deleteBtn{
+		margin-left:40px;
+        font-size: 1.6rem;
+	}
+    .tile {
+        width: 158px;
+        height: 158px;
+        margin: 0 20px 20px 0;
+    }
+    #readPage .tile {margin:0 10px 10px 0;}
+
+    .tile2t2 {
+        width: 336px;
+        height: 336px;
+    }
+
+    .tile1t2 {
+        width: 336px;
+        height: 158px;
+    }
+    /****************  漫画目录 ******************/
+    .tile-content .content-center>i{
+        font-size:3.5em;
+        width: 64px;
+        height: 64px;
+        margin-left: -32px;
+        margin-top: -32px;
+        line-height:64px;
+    }
+    .tile-content .content-center>.icon-arrow-down,.tile-content .content-center>.icon-enter{
+        left: 75%;
+    }
+    .tile-quadro{
+        /*2个双格加2个边距*/
+        /*336 * 2 + 20 * 2*/
+        width:712px;
+        padding-left:20px;
+    }
+    /********************************************/
+    .tile.onehalf {
+        width: 218px;
+    }
+    
+    .tile.onehalf-vertical {
+        height: 218px;
+    }
+    .tile.twothird-vertical {
+        height: 401px;
+    }
+    .readBookList {
+        padding-left: 38px;
+    }
+    .tile.double, .doubletile {
+        width: 336px;
+        margin: 0 20px 20px 0;
+    }
+
+    .tile.double-vertical {
+        height: 336px;
+    }
+
+    .tile .tile-content {
+        width: 134px;
+        height: 134px;
+    }
+   .tile.quadro {
+        width: 692px;
+    }
+
+    .tile.double .tile-content {
+        width: 312px;
+        height: 134px;
+    }
+    .breadcrumbNav .breadcrumbNav-container .nav{
+        width: 65%;
+        display: inline-block;
+        position: relative;
+        padding: 0 1%;
+        font-size: 18px;
+        line-height: 50px;
+        margin:0 0 0 60px;
+    }
+    .catalog-container{
+        display: block;
+        position: relative;
+        padding: 0 1%;
+        font-size: 18px;
+        line-height: 50px;
+        margin:0 0 0 60px;
+    }
+
+    .catalog-hot-tab{
+        height: 100%;
+        display: block;
+        position: relative;
+        padding: 0 1%;
+        margin:0 0 0 60px;
+    }
+
+    .catalog-hot-tab-content{
+        width: 100%;
+        height: auto;
+        line-height: 30px;
+        font-size: 18px;
+        height: 400px;
+        position: relative;
+        display: block;
+        -webkit-box-sizing: border-box;
+    }
+    .catalog-hot-tab-content .catalog-tab-content-item {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 3px;
+        position: relative;
+        float: left;
+        -webkit-box-sizing: border-box;
+    }
+    .battery
+    {
+        bottom:0px;
+        position:absolute;
+        left:0px;
+        z-index:2;
+    }
+    .dcSize {
+        bottom:12px;
+        position:absolute;
+        left:55px;
+        color:#006934;
+    }
+
+    #curTime
+    {
+        bottom:15px;
+        position:absolute;
+        left:20px;
+        font-size:0.75rem;
+        color:#006934;
+    }
+    .dialog-container {
+        width: 49.3%;
+        height: 40.3%;
+        display: block;
+        position: relative;
+        overflow: visible;
+        margin: 30% 20% 30% 20%;
+    }
+    .rank-item-double{
+        width:300px;
+        overflow:hidden;
+    }
+    .rank-item-single{
+        width:145px;
+        overflow:hidden;
+    }
+    .ranklist-item{
+        margin:10px 0;
+    }
+    .ranklist-item-content{
+        padding: 4px 0 0 110px;
+    }
+    .ranklist-item-title{
+        font-size:26px;
+        overflow:hidden;
+    }
+
+  
+    #tiles_container{
+        padding:0px;
+        margin:0px;
+    }
+	.tile .tile-content p {
+		line-height: 1.5rem;
+		height: 6rem;
+	}
+
+}
+
+@media all
+and (width : 768px)
+and (height: 1280px)
+and (orientation : portrait) {
+    html{
+        font-size: 26px;
+    }
+}

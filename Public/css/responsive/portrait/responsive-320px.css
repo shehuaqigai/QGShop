@@ -1,0 +1,16 @@
+/*touch5 ...*/
+@media screen
+and (device-width: 320px)
+and (device-height: 568px)
+and (-webkit-device-pixel-ratio: 2){
+
+
+
+}
+
+@media all
+and (width:320px)
+and (orientation : portrait){
+
+
+}
