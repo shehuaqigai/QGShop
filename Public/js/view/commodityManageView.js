@@ -217,7 +217,6 @@
                dialog.find("input.ordid").val(cate.get("ordid"));
             this.imageUpload(url,function(up,file,data){
                 var res=data.response;
-                console.log(res);
                 if(!res){
                     var $prompt=dialog.find(".add_cate_prompt");
                     $prompt.html("数据提交失败！");
