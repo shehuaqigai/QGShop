@@ -184,6 +184,15 @@
 
 
         },
+        /**
+         * 如果是点击的添加子分类和编辑
+         * 就渲染这里的选项ui
+         * 遍历该id上面的分类层级
+         * @param pid
+         * @param id
+         * @param cateTable
+         * @returns {string}
+         */
 
         addSubCate:function(pid,id,cateTable){
             var pids=[];
@@ -204,6 +213,11 @@
             });
             return temp;
         },
+        /**
+         * 当点击删除按钮的时候
+         * 对分类进行删除的动作
+         * @param e
+         */
         deleteCate:function(e){
             var ele= e.target;
             var cateTable=this.cateTable;
@@ -217,10 +231,11 @@
                },error:function(mod,response,options){
                    console.log("失败");
                }});
-
-
-
         },
+        /**
+         * 当点击编辑按钮后派发到这个方法来处理
+         * @param id
+         */
         updateCate:function(id){
               var cate=this.cateTable.get(id);
               var url=this.prifix_url+"update_cate";

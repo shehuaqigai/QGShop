@@ -11,14 +11,14 @@ class CommodityMController extends RestController {
         self::$Item_cate=D('Item_cate');
         self::$item=D('Item');
     }
-    public function index(){}
+    public function index(){
+    }
     public function productManage(){
        $str=self::$item->productList();
         echo json_encode($str);
 
     }
     public function get_Cate(){
-
        $cate=self::$Item_cate->productCategory();
         echo json_encode($cate);
     }
