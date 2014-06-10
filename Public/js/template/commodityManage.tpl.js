@@ -101,7 +101,7 @@
             '<td width="250px">' +
                 '<button class="add_subCate" pid="<%= value.get("pid") %>" id="<%= value.get("id") %>" status="addSubCate">添加子类</button>' +
                 '<button class="updateCate" id="<%= value.get("id") %>" pid="<%= value.get("pid") %>" status="update">编辑</button>' +
-                '<button id="<%= value.get("id") %>">删除</button>' +
+                '<button id="<%= value.get("id") %>" class="deleteCate">删除</button>' +
             '</td>' +
         "</tr>"+
         '<% }}) %>' +

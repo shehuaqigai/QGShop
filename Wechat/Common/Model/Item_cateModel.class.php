@@ -34,4 +34,42 @@ class Item_cateModel extends Model {
         }
 
     }
+
+    public function delete_cate($id){
+                $this->deleteSubCate($id);
+
+
+
+
+
+
+    }
+
+
+    private function deleteSubCate($id){
+        $id_nums=$this->field("id")->where("pid=".$id)->select();
+        $id_array=array();
+        if($id_nums){
+        $this->getSubCateIds($id_nums,$id_array);
+       }
+        array_push($id_array,$id);
+       $num=$this->where(implode(",",$id_array))->delete();
+        if($num){return true;}
+    }
+
+
+    private function getSubCateIds($ids,&$id_array){
+        foreach($ids as $value){
+            $id_nums=$this->field("id")->where("pid=".$value['id'])->select();
+            if($id_nums){
+                $this->getSubCateIds($id_nums,$id_array);
+            }
+            array_push($id_array,$value['id']);
+        }
+
+    }
+
+
+
+
 }

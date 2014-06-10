@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class CommodityMController extends Controller {
+use Think\Controller\RestController;
+class CommodityMController extends RestController {
        private static $Item_cate;//产品分类表对象
        private static $item;//商品列表
     /**
@@ -73,7 +73,7 @@ class CommodityMController extends Controller {
 
     }
 
-    public function deleteImageFile($img){
+    private function deleteImageFile($img){
         $path="./Public/resource/uploads/".$img;  //传递的路径两端要有/
         if(file_exists($path)){
             $res=unlink($path);
@@ -82,7 +82,9 @@ class CommodityMController extends Controller {
 
     }
 
-
-
-
+    public function delete_cate(){
+       $id=I("path.2");
+       $res=self::$Item_cate->delete_cate($id);
+        if($res){return 1;}else{return 0;}
+    }
 }

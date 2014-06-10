@@ -6,6 +6,7 @@
           'click .pro_cate .add_cate':'Category',//添加分类
           'click .pro_cate .add_subCate':'Category',//添加子分类
           'click .pro_cate .updateCate':'Category',//更新分类
+          'click .pro_cate .deleteCate':'deleteCate',//删除指定分类
           'click .close,.add_categoryAction .cancel_submit':'closeDialog',
           'click .add_categoryAction .formSubmit':'cateFormSubmit',
           'change .add_categoryAction select.cateSelect':'selectCateHandler'
@@ -40,7 +41,6 @@
                this.$el.append(this.$tempDialog);
             }
             this.renderSwitch(button);
-
         },
         /**
          * 渲染各个视图设置
@@ -65,7 +65,6 @@
                     formatDate:'Y-m-d'//格式
                 });
             this.showBrandData(this.brandTable,this.cateTable);
-
         },
         /**
          * 添加商品数据
@@ -204,6 +203,23 @@
                 temp+=self.template['selectCate']({options:cateTable,pid:value,id:key});
             });
             return temp;
+        },
+        deleteCate:function(e){
+            var ele= e.target;
+            var cateTable=this.cateTable;
+            var id=ele.getAttribute("id");
+            var $tr=$(ele).parents("tr");
+            var urlRoot=this.prifix_url+"delete_cate";
+            var model=cateTable.get(id);
+            model.urlRoot=urlRoot;
+               model.destroy({wait:true,success:function(mod,response,options){
+                   console.log("成功!");
+               },error:function(mod,response,options){
+                   console.log("失败");
+               }});
+
+
+
         },
         updateCate:function(id){
               var cate=this.cateTable.get(id);
