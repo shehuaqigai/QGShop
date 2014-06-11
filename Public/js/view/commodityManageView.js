@@ -128,13 +128,14 @@
                 var url=this.prifix_url+'add_cate';
                 this.imageUpload(url,function(up, file, obj) {
                     var res=obj.response;
+                    var $prompt=self.$el.find(".add_cate_prompt");
                     if(!res){
-                        var $prompt=self.$el.find(".add_cate_prompt");
                         $prompt.html("数据提交失败！");
                     }else{
                         var result=(0,1,eval)('('+obj.response+')');
                         var createCate=_.extend(self.upload.settings.multipart_params,result);
                         cateTable.push(createCate);
+                        $prompt.html("提交成功！");
                     }
                 });
             }
@@ -220,6 +221,7 @@
          */
         deleteCate:function(e){
             var ele= e.target;
+            var self=this;
             var cateTable=this.cateTable;
             var id=ele.getAttribute("id");
             var $tr=$(ele).parents("tr");
@@ -227,10 +229,27 @@
             var model=cateTable.get(id);
             model.urlRoot=urlRoot;
                model.destroy({wait:true,success:function(mod,response,options){
-                   console.log("成功!");
+                   mod=null;
+                   self.getSubCateIdsDelete(id,cateTable,self);
+                   $tr.remove();
+                   $tr=null;
                },error:function(mod,response,options){
-                   console.log("失败");
+                   console.log("删除数据出错");
                }});
+        },
+        /**
+         * 获取子类的所有id
+         * 如果删除一个分类就删除这个分类下面的所有分类
+         * @param id
+         */
+        getSubCateIdsDelete:function(id,cateTable,self){
+              cateTable.each(function(value){
+                  if(value.get("pid") == id){
+                      cateTable.remove(value);
+                      self.getSubCateIdsDelete(value.id,cateTable,self);
+                      value=null;
+                  }
+              });
         },
         /**
          * 当点击编辑按钮后派发到这个方法来处理
@@ -273,15 +292,13 @@
             var cateId=parseInt(value);
                 $select.nextAll().remove();
             if(value =="self"){return;}
-                $select.after(this.template['selectCate']({options:cateTable,pid:cateId,spid:spid,id:null}));
+                $select.after(this.template['selectCate']({options:cateTable,pid:cateId,id:null}));
             var next=$select.next();
             if(next[0].options.length==1){
 
                 next.remove();
                 return;
             }
-            //spid就是层级关系按父id来连接
-            spid !=0 ? next.attr("data-spid",spid+cateId+"|") : next.attr("data-spid",cateId+"|");
             next.attr("data-pid",cateId);
         },
         //文件开始上传事件

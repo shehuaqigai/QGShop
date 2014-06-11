@@ -85,6 +85,6 @@ class CommodityMController extends RestController {
     public function delete_cate(){
        $id=I("path.2");
        $res=self::$Item_cate->delete_cate($id);
-        if($res){return 1;}else{return 0;}
+        if($res){echo 1;}else{echo 0;}
     }
 }

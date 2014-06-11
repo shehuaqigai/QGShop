@@ -53,7 +53,7 @@ class Item_cateModel extends Model {
         $this->getSubCateIds($id_nums,$id_array);
        }
         array_push($id_array,$id);
-       $num=$this->where(implode(",",$id_array))->delete();
+        $num=$this->delete(implode(",",$id_array));
         if($num){return true;}
     }
 
