@@ -79,7 +79,6 @@ used as it is.
 	function _(str) {
 		return plupload.translate(str) || str;
 	}
-
 	function renderUI(id, target) {
 		// Remove all existing non plupload items
 		target.contents().each(function(i, node) {
@@ -141,15 +140,12 @@ used as it is.
         if (settings) {
 			this.each(function() {
 				var uploader, target, id, contents_bak;
-
 				target = $(this);
 				id = target.attr('id');
-
 				if (!id) {
 					id = plupload.guid();
 					target.attr('id', id);
 				}
-
 				contents_bak = target.html();
 				renderUI(id, target);
 

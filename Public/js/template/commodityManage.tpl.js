@@ -88,14 +88,14 @@
      '</div>'+
     "");
     /**
-     * 这个模板是商品分类表中数据填充的ui
+     * 这个模板是分类表中数据填充的ui
      * @type {*}
      */
     ADMIN.tpl['p_c_td']= _.template('' +
-        '<% tableContent.each(function(value){if(value.get("pid")==0){ %>' +
-        '<tr>' +
+        '<% tableContent.each(function(value){if(value.get("pid")==pid){ %>' +
+        '<tr pid="<%= value.get("pid") %>" id="<%= value.get("id") %>">' +
             '<td><input type="checkbox" name="isSelect" value="<%= value.get("id") %>"><%= value.get("id")%></td>' +
-            '<td class="cateName" ><i class="icon-contract2"></i><%= value.get("name") %></td>' +
+            '<td class="cateName" ><i class="icon-contract2" id="<%= value.get("id")%>"></i><%= value.get("name") %></td>' +
             '<td><img src="'+ADMIN.global.APPPATH+'Public/resource/uploads/<%= value.get("img") %>"/></td>' +
             '<td class="cate_type" status="<%= value.get("type") %>"><% if(value.get("type")){ %>商品类型<%}else{%>标记类型<%}%></td>' +
             '<td width="250px">' +
@@ -112,9 +112,12 @@
      */
     ADMIN.tpl['selectCate'] = _.template('' +
         '<select name="topCate" class="cateSelect" data-pid="<%= pid %>" >' +
-            '<option value="self" <%if(!id){%> selected <%}%>>本级分类</option>'+
+                '<option value="self" <%if(!id){%> selected <%}%>>本级分类</option>'+
             '<% options.each(function(value){ if(value.get("pid")==pid){ %>' +
-            '<option value="<%= value.get("id") %>"  <%if(value.get("id")==id){%> selected <%}%>  ><%= value.get("name") %> </option>'+
+                '<option value="<%= value.get("id") %>"  ' +
+                    '<%if(value.get("id")==id){%> selected <%}%>  >' +
+                    '<%= value.get("name") %> ' +
+                '</option>'+
             '<% }}) %>' +
         '</select>' +
         '');

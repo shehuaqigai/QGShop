@@ -22,8 +22,23 @@
     height:50rem;
     border:1px solid green;
 }
+
 #tem_Dialog .add_categoryAction td{
     border:1px solid red;
+}
+.pro_cate .icon-contract2,.pro_cate .icon-expand2{
+    height:3rem;
+    width:3rem;
+    border:1px solid red;
+    display:inline-block;
+    cursor:pointer;
+    color:red;
+    text-align:center;
+    line-height: 3rem;
+}
+.pro_cate img{
+    width:10rem;
+    height:10rem;
 }
  .add_categoryAction p{
     height:4rem;

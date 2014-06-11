@@ -7,6 +7,7 @@
           'click .pro_cate .add_subCate':'Category',//添加子分类
           'click .pro_cate .updateCate':'Category',//更新分类
           'click .pro_cate .deleteCate':'deleteCate',//删除指定分类
+          'click .pro_cate .icon-contract2':'openOrCloseCate',//关闭或者打开分类
           'click .close,.add_categoryAction .cancel_submit':'closeDialog',
           'click .add_categoryAction .formSubmit':'cateFormSubmit',
           'change .add_categoryAction select.cateSelect':'selectCateHandler'
@@ -83,7 +84,7 @@
          */
         productCategory:function(button){
             this.$el.prepend(this.template[button]({table_th:this.mixData.cateTitle}));
-            this.$el.find("tbody.cateLists").html(this.template['p_c_td']({tableContent:this.cateTable}));
+            this.$el.find("tbody.cateLists").html(this.template['p_c_td']({tableContent:this.cateTable,pid:0}));
         },
         /**
          * 触发添加分类和添加子分类动作
@@ -141,6 +142,35 @@
             }
             dialog.show();
         },
+        openOrCloseCate:function(e){
+            var ele= e.target;
+            var self=this;
+            var _class=ele.className;
+            var cateTable=this.cateTable;
+            var id=ele.getAttribute("id");
+            var cateList=this.$el.find(".pro_cate .cateLists");
+            var $tr=$(ele).parents("tr");
+            if(_class == "icon-contract2"){
+                ele.className="icon-expand2";
+                $tr.after(this.template['p_c_td']({tableContent:cateTable,pid:id}));
+            }else{
+                ele.className="icon-contract2";
+                deleteSubCate(id);
+            }
+            //删除子类下面的分类
+            function deleteSubCate(pid){
+                var $trs=cateList.find("tr[pid="+id+"]");
+
+
+            }
+
+
+        },
+        /**
+         * 图片上传渲染
+         * @param url
+         * @param callback
+         */
         imageUpload:function(url,callback){
             var $upload=$("#uploader");
             var Public=ADMIN.global.APPPATH+'Public/';
