@@ -26,6 +26,12 @@
 #tem_Dialog .add_categoryAction td{
     border:1px solid red;
 }
+.pro_cate table .cateName{
+    color:white;
+}
+.pro_cate table .cateName span{
+    color:black;
+}
 .pro_cate .icon-contract2,.pro_cate .icon-expand2{
     height:3rem;
     width:3rem;
@@ -37,8 +43,8 @@
     line-height: 3rem;
 }
 .pro_cate img{
-    width:10rem;
-    height:10rem;
+    width:3rem;
+    height:3rem;
 }
  .add_categoryAction p{
     height:4rem;

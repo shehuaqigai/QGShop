@@ -2,15 +2,15 @@
     //首页视图生成页
     var commodityManage=Backbone.View.extend({
         el:"#commodityManage",
-        events:{
-          'click .pro_cate .add_cate':'Category',//添加分类
-          'click .pro_cate .add_subCate':'Category',//添加子分类
-          'click .pro_cate .updateCate':'Category',//更新分类
+        events:{            //添加分类           //添加子分类           //更新分类
+          'click .pro_cate .add_cate,.pro_cate .add_subCate,.pro_cate .updateCate':'Category',
           'click .pro_cate .deleteCate':'deleteCate',//删除指定分类
-          'click .pro_cate .icon-contract2':'openOrCloseCate',//关闭或者打开分类
+          'click .pro_cate .icon-contract2,.pro_cate .icon-expand2':'openOrCloseCate',//关闭或者打开分类
           'click .close,.add_categoryAction .cancel_submit':'closeDialog',
           'click .add_categoryAction .formSubmit':'cateFormSubmit',
-          'change .add_categoryAction select.cateSelect':'selectCateHandler'
+          'change .add_categoryAction select.cateSelect':'selectCateHandler',
+          'click .pro_cate tfoot button.deleteSelect':"deleteSelectIds",
+         'click .pro_cate tfoot input[name="allSelect"]':"isSelectIds"
         },
         template:ADMIN.tpl,//模板
         mixData:ADMIN.global.mixData,//其他一些数据对象
@@ -142,26 +142,47 @@
             }
             dialog.show();
         },
+        /**
+         * 打开或者折叠分类
+         * @param e
+         */
         openOrCloseCate:function(e){
             var ele= e.target;
             var self=this;
             var _class=ele.className;
             var cateTable=this.cateTable;
-            var id=ele.getAttribute("id");
             var cateList=this.$el.find(".pro_cate .cateLists");
             var $tr=$(ele).parents("tr");
+            var id=$tr.attr("id");
+            var currentHtml=$(ele).parent().html();
             if(_class == "icon-contract2"){
                 ele.className="icon-expand2";
                 $tr.after(this.template['p_c_td']({tableContent:cateTable,pid:id}));
+                var _TD=cateList.find("tr[pid="+id+"] .cateName");
+                //对该分类下的子分类进行层级排版
+                //类似--田分类名|分类名|....   田是分类符号点击可以扩展,--是层级缩进;
+                _TD.each(function(i,ele){
+                    var $ele=$(ele);
+                    var span=$ele.find("span");
+                    var name=span.html();
+                    $ele.html(currentHtml);
+                    $ele.prepend("----");
+                    $ele.find("span").html("--|"+name);
+                });
             }else{
                 ele.className="icon-contract2";
                 deleteSubCate(id);
             }
             //删除子类下面的分类
             function deleteSubCate(pid){
-                var $trs=cateList.find("tr[pid="+id+"]");
-
-
+                var $trs=cateList.find("tr[pid='"+pid+"']");
+                if($trs.length>0){
+                    $trs.each(function(i,ele){
+                        var id=ele.id;
+                        $(ele).remove();
+                        deleteSubCate(id);
+                    });
+                }
             }
 
 
@@ -226,21 +247,24 @@
          */
 
         addSubCate:function(pid,id,cateTable){
-            var pids=[];
+            var pids=[];//pid数组
+            var ids=[];//id数组
             var parentModel;
+            var self=this;
             var temp='';
-            pids[id]=pid;
+            pids.push(pid);
+            ids.push(id);
             while(parseInt(pid) !=0){
                 //获取父id的pid
                 id=pid;
                 parentModel=cateTable.get(id);
+                ids.unshift(id);
                 pid=parentModel.get("pid");
-                pids[id]=pid;
+                pids.unshift(pid);
             }
-            pids.push(0);
-            pids.reverse();
             _.each(pids,function(value,key){
-                temp+=self.template['selectCate']({options:cateTable,pid:value,id:key});
+                console.log(ids[key]);
+                temp+=self.template['selectCate']({options:cateTable,pid:value,id:ids[key]});
             });
             return temp;
         },
@@ -258,14 +282,30 @@
             var urlRoot=this.prifix_url+"delete_cate";
             var model=cateTable.get(id);
             model.urlRoot=urlRoot;
-               model.destroy({wait:true,success:function(mod,response,options){
-                   mod=null;
-                   self.getSubCateIdsDelete(id,cateTable,self);
-                   $tr.remove();
-                   $tr=null;
-               },error:function(mod,response,options){
-                   console.log("删除数据出错");
-               }});
+            $.Zebra_Dialog('<strong>你确定要删除吗!</strong>',
+                {
+                    type:"confirmation",
+                    title:"确认框",
+                    buttons:[
+                        {caption:"是",callback:function(){
+                            model.destroy({wait:true,success:function(mod,response,options){
+                                mod=null;
+                                self.getSubCateIdsDelete(id,cateTable,self);
+                                $tr.remove();
+                                $tr=null;
+                            },error:function(mod,response,options){
+                                console.log("删除数据出错");
+                            }});
+
+                        }},
+                        {caption:"否"}
+                    ]
+                });
+
+
+
+
+
         },
         /**
          * 获取子类的所有id
@@ -280,6 +320,7 @@
                       value=null;
                   }
               });
+              $(".pro_cate tr[id='"+id+"']").remove();
         },
         /**
          * 当点击编辑按钮后派发到这个方法来处理
@@ -306,6 +347,69 @@
                         cateUpdate.img=result;
                         cate.set(cateUpdate);
                 }
+            });
+        },
+        /**
+         * 选择要取消或者删除的分类
+         * @param e
+         */
+        isSelectIds:function(e){
+            var isSelect= e.target.checked;
+            var ids=$(".pro_cate input[name='selectOrCancelId']");
+            if(isSelect){
+                   ids.each(function(i,ele){
+                     ele.checked=true;
+                   });
+               }else{
+                ids.each(function(i,ele){
+                    ele.checked=false;
+                });
+               }
+
+        },
+        /**
+         * 删除选择的分类
+         * @param e
+         */
+        deleteSelectIds:function(e){
+
+            var ids=$(".pro_cate input[name='selectOrCancelId']:checked");
+            var cateTable=this.cateTable;
+            var urlRoot=this.prifix_url+"delete_cate";
+            var self=this;
+            if(!ids.length){
+                $.Zebra_Dialog('<strong>你还没有选择要删除的分类</strong>');
+                return;
+            }
+            $.Zebra_Dialog('<strong>你确定要删除吗!</strong>',{
+                type:"confirmation",
+                title:"确认框",
+                buttons:[
+                    {
+                        caption:"是",
+                        callback:function(){
+                            ids.each(function(i,ele){
+                                var id=ele.value;
+                                var model=cateTable.get(id);
+                                model.urlRoot=urlRoot;
+                                model.destroy({
+                                    wait:true,
+                                    success:function(mod,response,options){
+                                        mod=null;
+                                        self.getSubCateIdsDelete(id,cateTable,self);
+                                    },
+                                    error:function(mod,response,options){
+                                        console.log("删除数据出错");
+                                    }
+                                });
+
+                            });
+                            ids.parents("tr").remove();
+                        }
+
+                    },
+                    {caption:"否"}
+                ]
             });
         },
         /**

@@ -84,6 +84,14 @@
         "</tr>"+
         "</thead>"+
         "<tbody class='cateLists'></tbody>"+
+        "<tfoot>" +
+            "<tr>" +
+                "<td colspan='5'>" +
+                    "<input type='checkbox' name='allSelect'/>" +
+                    "<strong class='allSelectOrCancel'>全选/取消</strong>" +
+                    "<button class='deleteSelect'>删除</button></td>" +
+            "</tr>" +
+        "</tfoot>"+
         "</table>"+
      '</div>'+
     "");
@@ -94,8 +102,8 @@
     ADMIN.tpl['p_c_td']= _.template('' +
         '<% tableContent.each(function(value){if(value.get("pid")==pid){ %>' +
         '<tr pid="<%= value.get("pid") %>" id="<%= value.get("id") %>">' +
-            '<td><input type="checkbox" name="isSelect" value="<%= value.get("id") %>"><%= value.get("id")%></td>' +
-            '<td class="cateName" ><i class="icon-contract2" id="<%= value.get("id")%>"></i><%= value.get("name") %></td>' +
+            '<td><input type="checkbox" name="selectOrCancelId" value="<%= value.get("id") %>"><%= value.get("id")%></td>' +
+            '<td class="cateName" ><i class="icon-contract2"></i><span><%= value.get("name") %></span></td>' +
             '<td><img src="'+ADMIN.global.APPPATH+'Public/resource/uploads/<%= value.get("img") %>"/></td>' +
             '<td class="cate_type" status="<%= value.get("type") %>"><% if(value.get("type")){ %>商品类型<%}else{%>标记类型<%}%></td>' +
             '<td width="250px">' +
