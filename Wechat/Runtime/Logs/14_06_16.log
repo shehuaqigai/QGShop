@@ -1,0 +1,48 @@
+[ 2014-06-16T09:16:08+08:00 ] 192.168.1.166 /QGShop/index.php/Admin/Index/adminHome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.223012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.067003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.068003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.642037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.642037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2014-06-16T09:16:10+08:00 ] 192.168.1.166 /QGShop/index.php/Admin/CommodityM/get_Cate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `weixin_item_cate` [ RunTime:0.088005s ]
+SQL: SHOW COLUMNS FROM `weixin_item` [ RunTime:0.007001s ]
+SQL: SELECT `id`,`name`,`img`,`type`,`pid`,`is_index`,`ordid`,`spid` FROM `weixin_item_cate`  [ RunTime:0.015001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2014-06-16T09:16:10+08:00 ] 192.168.1.166 /QGShop/index.php/Admin/CommodityM/productManage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `weixin_item_cate` [ RunTime:0.048002s ]
+SQL: SHOW COLUMNS FROM `weixin_item` [ RunTime:0.006001s ]
+SQL: SELECT `id`,`cate_id`,`intro`,`add_time`,`img`,`price`,`title`,`status`,`buy_num` FROM `weixin_item`  [ RunTime:0.029002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

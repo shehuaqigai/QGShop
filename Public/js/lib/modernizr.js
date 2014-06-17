@@ -27,8 +27,6 @@ window.Modernizr = (function( window, document, undefined ) {
 
         prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
 
-
-
         omPrefixes = 'Webkit Moz O ms',
 
         cssomPrefixes = omPrefixes.split(' '),
@@ -2619,8 +2617,6 @@ Modernizr.addTest('sharedworkers', function(){
 // in IE7 in HTTPS this can cause a Mixed Content security popup.
 //  github.com/Modernizr/Modernizr/issues/362
 // To avoid that you can create a new iframe and inject this.. perhaps..
-
-
 (function(){
 
     var datauri = new Image();
