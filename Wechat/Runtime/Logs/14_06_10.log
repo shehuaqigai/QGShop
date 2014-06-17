@@ -3447,3 +3447,51 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
 
+[ 2014-06-10T19:14:50+08:00 ] ::1 /xampp/QGShop/index.php/Admin/CommodityM/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Controller/RestController.class.php 第 118 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+NOTIC: [2] mysql_connect(): No such file or directory /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+ERR: No such file or directory
+
+[ 2014-06-10T19:14:51+08:00 ] ::1 /xampp/QGShop/index.php/Admin/CommodityM/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+NOTIC: [2] mysql_connect(): No such file or directory /Applications/XAMPP/xamppfiles/htdocs/xampp/QGShop/TP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+ERR: No such file or directory
+

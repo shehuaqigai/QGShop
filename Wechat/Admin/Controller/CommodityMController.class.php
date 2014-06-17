@@ -73,6 +73,20 @@ class CommodityMController extends RestController {
 
     }
 
+
+    public function update_cateName(){
+     $put=file_get_contents("php://input");
+     $put=json_decode($put,true);
+     $result=self::$Item_cate->update_cate($put);
+     if($result){
+            echo 1;
+        }else{
+         echo 0;
+     }
+
+
+    }
+
     private function deleteImageFile($img){
         $path="./Public/resource/uploads/".$img;  //传递的路径两端要有/
         if(file_exists($path)){

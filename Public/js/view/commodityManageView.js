@@ -10,7 +10,9 @@
           'click .add_categoryAction .formSubmit':'cateFormSubmit',
           'change .add_categoryAction select.cateSelect':'selectCateHandler',
           'click .pro_cate tfoot button.deleteSelect':"deleteSelectIds",
-         'click .pro_cate tfoot input[name="allSelect"]':"isSelectIds"
+          'click .pro_cate tfoot input[name="allSelect"]':"isSelectIds",
+          'click .cateNameEdite,.icon-pencil':"editeCateName",
+          'change .inputEditeCateName':"inputEditeCateName"
         },
         template:ADMIN.tpl,//模板
         mixData:ADMIN.global.mixData,//其他一些数据对象
@@ -167,7 +169,7 @@
                     var name=span.html();
                     $ele.html(currentHtml);
                     $ele.prepend("----");
-                    $ele.find("span").html("--|"+name);
+                    $ele.find("span").html(name);
                 });
             }else{
                 ele.className="icon-contract2";
@@ -185,6 +187,36 @@
                 }
             }
 
+
+        },
+        /**
+         * 编辑分类名称
+         */
+        editeCateName:function(e){
+           var $ele=this.$el.find(e.target);
+            var self=this;
+           var td=$ele.parent();
+           var edite=td.find(".cateNameEdite");
+            edite.replaceWith("<input type='text' value='"+edite.html()+"' class='inputEditeCateName' style='color:black;'/>");
+           var input=td.find(".inputEditeCateName");
+            input.focus();
+            input.blur(function(e){
+                self.inputEditeCateName(e);
+            });
+
+        },
+        inputEditeCateName:function(e){
+            var ele= e.target;
+            var val=ele.value;
+            var $ele=this.$el.find(ele);
+            var id=$ele.parents("tr").attr("id");
+            var model=this.cateTable.get(id);
+            var url=this.prifix_url+"update_cateName";
+            $ele.replaceWith('<span class="cateNameEdite">'+val+'</span>');
+            model.urlRoot=url;
+            model.save({name:val},{success:function(mod,response,options){
+                if(response){console.log("更新成功");}
+            },error:function(){console.log("错误");}})
 
         },
         /**
