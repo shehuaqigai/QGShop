@@ -2,9 +2,11 @@
         <!--加载jquery日历插件样式-->
         <link href="__CSS__/lib/jquery.datetimepicker.css" rel="stylesheet"/>
         <!--加载文件上传样式-->
-        <link rel="stylesheet" href="__CSS__/lib/plupload/css/queue.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="__CSS__/lib/plupload/css/queue.css" type="text/css" media="screen"/>
          <!--对话框插件样式-->
         <link rel="stylesheet" href="__CSS__/lib/Dialog/flat/zebra_dialog.css" type="text/css">
+        <!--加载单元测试Qunit样式-->
+        <link rel="stylesheet" href="__CSS__/lib/unitTest/qunit1.14.css" type="text/css"/>
         <!--加载-各个视图样式-->
         <link href="__CSS__/custom/admin.css" rel="stylesheet"/>
         <link href="__CSS__/custom/wechatSet.css" rel="stylesheet"/>
@@ -16,7 +18,18 @@
         <link href="__CSS__/custom/wechatUserManage.css" rel="stylesheet"/>
         </head>
     <body>
-        <div id="adminPage"></div>
+    <!--qunit开头的都是单元测试ui-->
+    <div id="qunit-tests"></div>
+    <div id="qunit-header"></div>
+    <div id="qunit-banner"></div>
+    <div id="qunit-testrunner-toolbar"></div>
+    <div id="qunit-userAgent"></div>
+    <div id="qunit-testresult"></div>
+    <div id="qunit-modulefilter"></div>
+    <div id="qunit-modulefilter-container"></div>
+    <div id="qunit-fixture"></div>
+    <!--单元ui结束-->
+    <div id="adminPage"></div>
         <script>
                 /**
                  *dom的操作全部交给js来处理
@@ -69,5 +82,31 @@
         <script src="__JS__/controller/adminController.js"></script>
         <!--加载启动文件 start-->
         <script src="__JS__/bootstrap/admin.js"></script>
+
+ <!-------------------------------下面是测试单元在发布版本将移除-------------------------------->
+        <!--单元测试文件 start-->
+        <!--测试代码模型-->
+        <script src="__JS__/test/model/adminModelTest.js"></script>
+        <script src="__JS__/test/model/customMenuModelTest.js"></script>
+        <script src="__JS__/test/model/wechatSetModelTest.js"></script>
+        <script src="__JS__/test/model/wechatUserManageModelTest.js"></script>
+        <script src="__JS__/test/model/adminManageModelTest.js"></script>
+        <script src="__JS__/test/model/commodityManageModelTest.js"></script>
+        <script src="__JS__/test/model/otherSettingModelTest.js"></script>
+        <script src="__JS__/test/model/tradeManageModelTest.js"></script>
+        <!--测试代码视图-->
+        <script src="__JS__/test/view/customMenuViewTest.js"></script>
+        <script src="__JS__/test/view/wechatSetViewTest.js"></script>
+        <script src="__JS__/test/view/wechatUserManageViewTest.js"></script>
+        <script src="__JS__/test/view/adminViewTest.js"></script>
+        <script src="__JS__/test/view/adminManageViewTest.js"></script>
+        <script src="__JS__/test/view/commodityManageViewTest.js"></script>
+        <script src="__JS__/test/view/otherSettingViewTest.js"></script>
+        <script src="__JS__/test/view/tradeManageViewTest.js"></script>
+        <!--测试代码控制器-->
+        <script src="__JS__/test/controller/adminControllerTest.js"></script>
+        <!--测试代码-->
+        <script src="__JS__/test/bootstrap/adminTest.js"></script>
+        <script src="__JS__/test/test.js"></script>
     </body>
 </html>
