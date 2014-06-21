@@ -15,23 +15,12 @@
 
 
 
-        <!--加载jquery日历插件样式-->
-        <link href="/QGShop/Public/css/lib/jquery.datetimepicker.css" rel="stylesheet"/>
         <!--加载文件上传样式-->
         <link rel="stylesheet" href="/QGShop/Public/css/lib/plupload/css/queue.css" type="text/css" media="screen"/>
          <!--对话框插件样式-->
         <link rel="stylesheet" href="/QGShop/Public/css/lib/Dialog/flat/zebra_dialog.css" type="text/css">
-        <!--加载单元测试Qunit样式-->
-        <link rel="stylesheet" href="/QGShop/Public/css/lib/unitTest/qunit1.14.css" type="text/css"/>
-        <!--加载-各个视图样式-->
-        <link href="/QGShop/Public/css/custom/admin.css" rel="stylesheet"/>
-        <link href="/QGShop/Public/css/custom/wechatSet.css" rel="stylesheet"/>
-        <link href="/QGShop/Public/css/custom/adminManage.css" rel="stylesheet"/>
-        <link href="/QGShop/Public/css/custom/commodityManage.css" rel="stylesheet"/>
-        <link href="/QGShop/Public/css/custom/otherSetting.css" rel="stylesheet"/>
-        <link href="/QGShop/Public/css/custom/tradeManage.css" rel="stylesheet"/>
-        <link href="/QGShop/Public/css/custom/customMenu.css" rel="stylesheet"/>
-        <link href="/QGShop/Public/css/custom/wechatUserManage.css" rel="stylesheet"/>
+         <!--压缩css-->
+        <link href="/QGShop/Public/css/debug/debug_admin.css" rel="stylesheet"/>
         </head>
     <body>
     <!--qunit开头的都是单元测试ui-->
