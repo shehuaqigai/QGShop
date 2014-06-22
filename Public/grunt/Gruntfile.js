@@ -53,7 +53,11 @@ module.exports = function(grunt){
                 }
             }
             */
-        }
+        },
+        //打开多个浏览器查看兼容性
+        browserSync:{},
+        //文档生成工具
+        jsdoc:{}
     });
 
     //加载Grunt插件
