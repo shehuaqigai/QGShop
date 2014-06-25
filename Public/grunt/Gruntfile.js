@@ -168,7 +168,14 @@ module.exports = function(grunt){
         /**打开多个浏览器查看兼容性*/
         browserSync:{},
         /**文档生成工具*/
-        jsdoc:{}
+        jsdoc:{
+          shopAPI:{
+            src:["../js/bootstrap/*.js","../js/controller/*.js","../js/model/*.js","../js/template/*.js", "../js/test/*.js","../js/view/*.js"],
+            options: {
+                destination: '../../DevDoc/QGShopDoc'
+            }
+          }
+        }
     });
 
     //加载Grunt插件
