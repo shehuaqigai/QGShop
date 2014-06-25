@@ -127,8 +127,8 @@ module.exports = function(grunt){
                 //输出信息流默认的是grunt内置的你可以自定义或者使用jslint和checkstyle这俩个是xml结构
                 //也可以用jshint-stylish需要npm安装npm install --save-dev jshint-stylish -g
             reporter:require('jshint-stylish'),
-            //reporterOutput:"hintLog.md",
-            force:true
+            //reporterOutput:"hintLog.md",//把控制台信息流写入指定文件
+            force:true//强制继续
             },
             js:{
                  files:{
@@ -148,16 +148,21 @@ module.exports = function(grunt){
         htmlhint:{},
         /**自动监控执行grunt自动化程序*/
         watch: {
-            less:{
-                files:['../css/custom/*.less'],
-                tasks:['less:dev_admin_home'],
-                options:{
+             options:{
                         spawn: true,
                        // debounceDelay: 10000,//连续释放相同路径和状态的事件之前等待的时间。比如，你的Gruntfile.js文件发生了改变，一个改变（changed）事件，只有经过给定的毫秒数后，才能再次触发。
                         event:['added', 'deleted','changed'],
                         interval:5000,
                         interrupt: true
-                }
+
+             },
+            less:{
+                files:['../css/custom/*.less'],
+                tasks:['less:dev_admin_home'],
+            },
+            jshint:{
+              files:["../js/bootstrap/*.js","../js/controller/*.js", "../js/model/*.js","../js/template/*.js","../js/test/*.js","../js/view/*.js"],
+              tasks:['jshint']
             }
         },
         /**打开多个浏览器查看兼容性*/
