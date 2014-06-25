@@ -35,4 +35,4 @@
 
     });
     window.ADMIN.V.customMenuView=customMenu;
-}())
+}());

@@ -21,12 +21,6 @@
                // 第一个，设定的值，第二个调用函数返回的值，第三个参数说明 （可选）
                equal( "hello", value, "我们期望得到hello");
            });
-
-
-
-       }
-
-
+       };
     ADMIN.unit=unitTest;
-
 }).call(this);

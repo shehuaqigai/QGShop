@@ -1,0 +1,68 @@
+#commodityManage table {
+  width: 100%;
+}
+#commodityManage table td,
+#commodityManage table th {
+  border: 1px solid green;
+  text-align: left;
+}
+#tem_Dialog table {
+  width: 100%;
+}
+#tem_Dialog .add_categoryAction {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30rem;
+  margin-top: -25rem;
+  width: 60rem;
+  height: 50rem;
+  border: 1px solid green;
+}
+#tem_Dialog .add_categoryAction td {
+  border: 1px solid red;
+}
+.pro_cate table .cateName {
+  color: white;
+}
+.icon-pencil {
+  color: black;
+}
+.pro_cate table .cateName span {
+  color: black;
+}
+.pro_cate .icon-contract2,
+.pro_cate .icon-expand2 {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid red;
+  display: inline-block;
+  cursor: pointer;
+  color: red;
+  text-align: center;
+  line-height: 3rem;
+}
+.pro_cate img {
+  width: 3rem;
+  height: 3rem;
+}
+.add_categoryAction p {
+  height: 4rem;
+  border: 1px solid black;
+  margin: 0;
+  line-height: 4rem;
+}
+.add_categoryAction p .close {
+  float: right;
+  height: 4rem;
+  width: 7rem;
+}
+#tem_Dialog .add_cate_prompt {
+  height: 4rem;
+  border: 1px solid black;
+  margin: 0;
+  line-height: 4rem;
+  color: red;
+  text-align: center;
+}

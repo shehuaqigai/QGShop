@@ -8,14 +8,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>微商城后台管理</title>
     <link rel="shortcut icon" href="/QGShop/Public/imgs/favicon.ico" type="image/x-icon">
-    <link href="/QGShop/Public/css/lib/reset.css" rel="stylesheet"/>
     <link href="/QGShop/Public/css/lib/iconmoon.css" rel="stylesheet"/>
+    <link href="/QGShop/Public/css/lib/reset.css" rel="stylesheet"/>
 
 
 
 
 
-<link href="/QGShop/Public/css/custom/adminLogin.css" rel="stylesheet"/>
+
+<link href="/QGShop/Public/build/debug/css/custom/admin_login.css" rel="stylesheet"/>
+<!--link href="/QGShop/Public/build/release/css/admin_login.min.css" rel="stylesheet"/-->
 </head>
 <body>
 <div id="loginForm">

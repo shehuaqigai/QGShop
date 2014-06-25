@@ -1,5 +1,5 @@
 (function(root){
 
 
-}(window))
+}(window));
 

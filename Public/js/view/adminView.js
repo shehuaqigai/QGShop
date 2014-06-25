@@ -15,7 +15,7 @@
         },
         //渲染首页模板
         render:function(){
-            this.$el.html(this.template['adminHome']());
+            this.$el.html(this.template.adminHome());
             this.insertLeftNav();
 
         },
@@ -26,7 +26,7 @@
            var li='';
             //遍历导航列表数据
             this.models.each(function(value,key){
-            li+=self.template['navListUI'](value.attributes);
+            li+=self.template.navListUI(value.attributes);
             });
             $ul.append(li);
             $ul.find('.switchContainer').hide();
@@ -79,4 +79,4 @@
 
     });
     window.ADMIN.V.adminView=adminView;
-}())
+}());

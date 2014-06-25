@@ -41,4 +41,4 @@
 
     });
     window.ADMIN.V.wechatSetView=wechatSet;
-}())
+}());

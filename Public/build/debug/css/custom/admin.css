@@ -1,0 +1,89 @@
+.header {
+  height: 6rem;
+  background-color: dodgerblue;
+  position: fixed;
+  width: 100%;
+  font-size: 4rem;
+  line-height: 6rem;
+}
+.padding {
+  height: 7rem;
+  position: relative;
+}
+#container {
+  width: 100%;
+  height: auto;
+}
+#container .leftNav {
+  height: 85%;
+  width: 12%;
+  position: fixed;
+  left: 1%;
+  border-right: 1px solid #b5b5b5;
+}
+#container .leftNav > ul {
+  margin: 0rem;
+  padding: 0rem;
+  width: 100%;
+}
+#container .leftNav .switchContainer {
+  border-bottom: 1px solid black;
+}
+#container .leftNav > ul > li > dl > dt > i {
+  color: gray;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+#container .leftNav > ul > li > dl > dt {
+  height: 3rem;
+  line-height: 3rem;
+  border-bottom: 2px solid #1e90ff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+#container .leftNav > ul > li > dl dd {
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+  background-color: #f7fbfc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#container .leftNav > ul > li > dl dd:hover {
+  background-color: rgba(157, 157, 157, 0.6);
+  position: relative;
+  left: 0.1rem;
+  top: 0.1rem;
+}
+#container #showContent {
+  width: 80%;
+  margin-left: 14%;
+}
+#showContent .currentTitle {
+  border-bottom: 3px solid black;
+  background-color: rgba(30, 144, 255, 0.2);
+  height: 4rem;
+  margin: 0;
+  line-height: 4rem;
+  padding-left: 4rem;
+}
+#showContent .settingContainer {
+  width: 100%;
+  border: 1px solid #9d9d9d;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+}
+#tem_Dialog {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.15);
+}

@@ -18,7 +18,7 @@
     });
     //创建管理员管理设置数据
     window.ADMIN.M.customMenu=collection;
-})()
+})();
 
 
 

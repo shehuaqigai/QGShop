@@ -33,4 +33,4 @@
         }
     });
     window.ADMIN.V.adminManageView=adminManage;
-}())
+}());

@@ -1,0 +1,37 @@
+#container {
+  width: 100%;
+  height: 100%;
+}
+#container .contentShow {
+  width: 100%;
+}
+#container .contentShow ul {
+  margin: 0;
+  padding: 0;
+}
+#container .contentShow ul li {
+  height: 20rem;
+  width: 45%;
+  margin-top: 1%;
+  margin-left: 3.3%;
+  display: inline-block;
+  background-color: pink;
+}
+#container .menuNav {
+  position: fixed;
+  height: 4rem;
+  width: 100%;
+  background-color: black;
+  text-algin: center;
+  z-index: 10;
+  bottom: 0;
+}
+#container .menuNav i {
+  display: inline-block;
+  width: 24%;
+  height: 4rem;
+  color: white;
+  line-height: 4rem;
+  font-size: 3rem;
+  text-align: center;
+}

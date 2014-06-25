@@ -87,12 +87,12 @@
 
 
 
-                ]
+                ];
                 _.each(navList,function(value){
                     mode=curmodel.clone();
                     mode.set(value);
                     self.push(mode);
-                })
+                });
 
             }
         });
@@ -100,7 +100,7 @@
     window.ADMIN.M.navList=navList;
 
 
-})()
+})();
 
 
 

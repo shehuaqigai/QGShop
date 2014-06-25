@@ -42,7 +42,7 @@
     //创建商品管理模块数据表
     window.ADMIN.M.commodityManage=collection;
 
-})()
+})();
 
 
 

@@ -34,4 +34,4 @@
         }
     });
     window.ADMIN.V.wechatUserManageView=wechatUserManage;
-}())
+}());

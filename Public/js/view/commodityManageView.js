@@ -1,6 +1,6 @@
 (function(){
     //首页视图生成页
-    var commodityManage=Backbone.View.extend({
+    var commodityManage = Backbone.View.extend({
         el:"#commodityManage",
         events:{            //添加分类           //添加子分类           //更新分类
           'click .pro_cate .add_cate,.pro_cate .add_subCate,.pro_cate .updateCate':'Category',
@@ -79,14 +79,14 @@
             data.each(function(value){
                cate[value.get('id')]=value.get('name');
             });
-            this.$el.find("tbody.dataLists").html(this.template['p_m_td']({tableContent:lists,cate:cate}));
+            this.$el.find("tbody.dataLists").html(this.template.p_m_td({tableContent:lists,cate:cate}));
         },
         /**
          * 商品分类功能
          */
         productCategory:function(button){
             this.$el.prepend(this.template[button]({table_th:this.mixData.cateTitle}));
-            this.$el.find("tbody.cateLists").html(this.template['p_c_td']({tableContent:this.cateTable,pid:0}));
+            this.$el.find("tbody.cateLists").html(this.template.p_c_td({tableContent:this.cateTable,pid:0}));
         },
         /**
          * 触发添加分类和添加子分类动作
@@ -118,7 +118,7 @@
             var temp='';
             //添加分类模板
             if(status=="addCate" || pid =="0"){
-                temp=self.template['selectCate']({options:cateTable,pid:0,id:null});
+                temp=self.template.selectCate({options:cateTable,pid:0,id:null});
             }else{
                 temp=this.addSubCate(pid,id,cateTable);            //如果是添加子类进来和更新分类进来的
 
@@ -159,7 +159,7 @@
             var currentHtml=$(ele).parent().html();
             if(_class == "icon-contract2"){
                 ele.className="icon-expand2";
-                $tr.after(this.template['p_c_td']({tableContent:cateTable,pid:id}));
+                $tr.after(this.template.p_c_td({tableContent:cateTable,pid:id}));
                 var _TD=cateList.find("tr[pid="+id+"] .cateName");
                 //对该分类下的子分类进行层级排版
                 //类似--田分类名|分类名|....   田是分类符号点击可以扩展,--是层级缩进;
@@ -216,7 +216,7 @@
             model.urlRoot=url;
             model.save({name:val},{success:function(mod,response,options){
                 if(response){console.log("更新成功");}
-            },error:function(){console.log("错误");}})
+            },error:function(){console.log("错误");}});
 
         },
         /**
@@ -286,7 +286,7 @@
             var temp='';
             pids.push(pid);
             ids.push(id);
-            while(parseInt(pid) !=0){
+            while(parseInt(pid) !==0){
                 //获取父id的pid
                 id=pid;
                 parentModel=cateTable.get(id);
@@ -296,7 +296,7 @@
             }
             _.each(pids,function(value,key){
                 console.log(ids[key]);
-                temp+=self.template['selectCate']({options:cateTable,pid:value,id:ids[key]});
+                temp+=self.template.selectCate({options:cateTable,pid:value,id:ids[key]});
             });
             return temp;
         },
@@ -366,8 +366,12 @@
               var name=dialog.find("input.cate_name");
               var is_index=parseInt(cate.get('is_index'));
                name.val(cate.get('name'));
-               is_index == 1 ? dialog.find("input[type='radio'].show").attr("checked"):dialog.find("input[type='radio'].hide").attr("checked");
-               dialog.find("input.ordid").val(cate.get("ordid"));
+               if( 1==is_index){
+                dialog.find("input[type='radio'].show").attr("checked","checked");
+               }else{
+                dialog.find("input[type='radio'].hide").attr("checked","checked");
+               }
+            dialog.find("input.ordid").val(cate.get("ordid"));
             this.imageUpload(url,function(up,file,data){
                 var res=data.response;
                 if(!res){
@@ -458,7 +462,7 @@
             var cateId=parseInt(value);
                 $select.nextAll().remove();
             if(value =="self"){return;}
-                $select.after(this.template['selectCate']({options:cateTable,pid:cateId,id:null}));
+                $select.after(this.template.selectCate({options:cateTable,pid:cateId,id:null}));
             var next=$select.next();
             if(next[0].options.length==1){
 
@@ -504,8 +508,9 @@
                 is_index:indexShow,
                 ordid:ordid
             };
+            var id;
             if(status=="update"){
-                var id=this.addOrSubCate.id;
+              id=this.addOrSubCate.id;
             }
             createCate.id=id;
             upload.settings.multipart_params=createCate;
@@ -533,5 +538,5 @@
         }
 
     });
-    window.ADMIN.V.commodityManageView=commodityManage;
-}())
+       window.ADMIN.V.commodityManageView=commodityManage;
+})();

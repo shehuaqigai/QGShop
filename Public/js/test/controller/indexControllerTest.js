@@ -1,3 +1,3 @@
 (function(root){
 
-}(window))
+}(window));

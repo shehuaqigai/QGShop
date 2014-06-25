@@ -3,7 +3,7 @@
      * 这个模板是商品管理子功能的页面
      * @type {*}
      */
-    ADMIN.tpl['productManage'] = _.template('' +
+    ADMIN.tpl.productManage = _.template('' +
      '<div>' +
         '<div class="searchBox">' +
             '<div>' +
@@ -51,7 +51,7 @@
      * 这个模板是商品管理子功能中表数据的生成的ui
      * @type {*}
      */
-    ADMIN.tpl['p_m_td']= _.template('' +
+    ADMIN.tpl.p_m_td= _.template('' +
         '<% tableContent.each(function(value){ %>' +
             '<tr>' +
                 '<td><input type="checkbox" name="isSelect" value="<%= value.id %>"></td>' +
@@ -71,7 +71,7 @@
      * 不包括数据填充
      * @type {*}
      */
-    ADMIN.tpl['productCategory'] = _.template(''+
+    ADMIN.tpl.productCategory = _.template(''+
      '<div class="pro_cate">' +
         '<p><button class="add_cate" pid="0" status="addCate">添加分类</button></p>'+
         "<table>"+
@@ -99,7 +99,7 @@
      * 这个模板是分类表中数据填充的ui
      * @type {*}
      */
-    ADMIN.tpl['p_c_td']= _.template('' +
+    ADMIN.tpl.p_c_td= _.template('' +
         '<% tableContent.each(function(value){if(value.get("pid")==pid){ %>' +
         '<tr pid="<%= value.get("pid") %>" id="<%= value.get("id") %>">' +
             '<td><input type="checkbox" name="selectOrCancelId" value="<%= value.get("id") %>"><%= value.get("id")%></td>' +
@@ -118,7 +118,7 @@
      * 这个是分类select选项ui
      * @type {*}
      */
-    ADMIN.tpl['selectCate'] = _.template('' +
+    ADMIN.tpl.selectCate = _.template('' +
         '<select name="topCate" class="cateSelect" data-pid="<%= pid %>" >' +
                 '<option value="self" <%if(!id){%> selected <%}%>>本级分类</option>'+
             '<% options.each(function(value){ if(value.get("pid")==pid){ %>' +
@@ -133,7 +133,7 @@
      * 这个是添加分类子功能的ui
      * @type {*}
      */
-    ADMIN.tpl['add_categoryAction'] = _.template(''+
+    ADMIN.tpl.add_categoryAction = _.template(''+
         '<div class="add_categoryAction">' +
             '<p><i>添加分类</i><input class="close" type="button" value="X" spid="0"/></p>' +
                 '<table>' +
@@ -165,6 +165,6 @@
         '</div>'+
 
     '');
-    ADMIN.tpl['addProduct'] = _.template('');
-    ADMIN.tpl['brandManage'] = _.template('');
+    ADMIN.tpl.addProduct = _.template('');
+    ADMIN.tpl.brandManage = _.template('');
 }).call(this);

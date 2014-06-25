@@ -36,4 +36,4 @@
 
     });
     window.ADMIN.V.tradeManageView=tradeManage;
-}())
+}());

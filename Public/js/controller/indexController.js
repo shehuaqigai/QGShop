@@ -12,4 +12,4 @@
         }
     });
     root.APP.C.AppRouter=AppRouter;
-}(window))
+}(window));

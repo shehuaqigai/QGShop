@@ -11,7 +11,7 @@
         $chapter:null,//文章容器对象下得chapter对象
         articleScroll:null,//文章容器滑动事件
         $ul:null,//导航列表ul容器对象
-        template:APP.JST['homeUI'],//首页模板
+        template:APP.JST.homeUI,//首页模板
         models:null,//表的集合backbone.collection
         //初始化应用
          initialize:function(){
@@ -34,12 +34,12 @@
          },
         //创建章节导航列表
          createChapterNavList:function(type){
-        var navList=''
+        var navList='';
              //遍历chapter表
              this.models.chapter.each(function(value,key){
                  //如果类型为1就是php的基础知识内容
                  if(value.attributes.type==type){
-                     navList+=APP.JST['navListUI'](value.toJSON());
+                     navList+=APP.JST.navListUI(value.toJSON());
                  }
 
              });
@@ -55,7 +55,7 @@
              //遍历category表
              this.models.category.each(function(value){
                  //如果类型为1就是php的基础知识内容
-                     cateList+=APP.JST['cateListUI'](value.toJSON());
+                     cateList+=APP.JST.cateListUI(value.toJSON());
              });
             $cate.append(cateList);
         },
@@ -141,7 +141,7 @@
          ajaxHandler:function(dir,title){
             this.$article.find(".articleTitle").html(' '+title);
             this.$chapter.empty();
-            this.$chapter.append(APP.JST['iconBusyUI']());
+            this.$chapter.append(APP.JST.iconBusyUI());
             var url="./packages/resource/"+dir+'.html';
             var defer=$.ajax(url,{
                 type:"get",
@@ -159,9 +159,9 @@
                 this.articleScroll.refresh();
             },function(err){
 
-            })
+            });
 
         }
         });
         window.APP.V.indexView=indexView;
-}())
+}());

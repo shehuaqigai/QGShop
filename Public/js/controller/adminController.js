@@ -59,7 +59,7 @@
          */
         main : function() {
             if(!this.ismain){
-               new ADMIN.V.adminView({collection:new this.collection['navList']});
+               new ADMIN.V.adminView({collection:new this.collection.navList()});
                 this.ismain=true;
             }else{
             }
@@ -158,5 +158,5 @@
         }
     });
     root.ADMIN.C.AdminRouter=Router;
-}(window))
+}(window));
 

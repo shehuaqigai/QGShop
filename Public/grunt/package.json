@@ -9,12 +9,14 @@
     "grunt-browser-sync": "^0.9.1",
     "grunt-contrib-coffee": "^0.10.1",
     "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-cssmin": "^0.10.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-less": "^0.11.3",
     "grunt-contrib-qunit": "^0.5.1",
     "grunt-contrib-uglify": "^0.5.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-htmlhint": "^0.4.0",
-    "grunt-jsdoc": "^0.5.6"
+    "grunt-jsdoc": "^0.5.6",
+    "jshint-stylish": "^0.2.0"
   }
 }
