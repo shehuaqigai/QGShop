@@ -172,7 +172,9 @@ module.exports = function(grunt){
           shopAPI:{
             src:["../js/bootstrap/*.js","../js/controller/*.js","../js/model/*.js","../js/template/*.js", "../js/test/*.js","../js/view/*.js"],
             options: {
-                destination: '../../DevDoc/QGShopDoc'
+                destination: '../../DevDoc/QGShopDoc',
+                template : "node_modules/ink-docstrap/template",
+                configure : "node_modules/ink-docstrap/template/jsdoc.conf.json"
             }
           }
         }

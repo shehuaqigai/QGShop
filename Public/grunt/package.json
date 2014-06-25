@@ -2,8 +2,24 @@
   "name": "QGShop",
   "version": "1.0.0",
   "description": "电子商务网站",
-  "author": "杨长秋",
-  "license": "BSD",
+  "homepage": "https://github.com/shehuaqigai/QGShop",
+  "author": {
+    "name": " Yang Chang Qiu",
+    "email": "570274003@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shehuaqigai/QGShop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shehuaqigai/QGShop/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shehuaqigai/QGShop/LICENSE-MIT"
+    }
+  ],
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-browser-sync": "^0.9.1",
@@ -17,6 +33,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-htmlhint": "^0.4.0",
     "grunt-jsdoc": "^0.5.6",
+    "ink-docstrap": "^0.4.5",
     "jshint-stylish": "^0.2.0"
   }
 }
