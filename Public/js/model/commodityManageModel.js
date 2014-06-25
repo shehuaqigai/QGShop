@@ -35,6 +35,9 @@
         }
     });
 
+
+    
+
     collection.brandMangageTable=product_manage;
     collection.cateTable=cateTable;
 
