@@ -267,9 +267,6 @@ module.exports = function(grunt){
       grunt.loadNpmTasks('grunt-contrib-connect');
       grunt.loadNpmTasks('grunt-jsdoc');
 
-    //默认的Grunt任务
+    //批处理任务
  // grunt.registerTask('test',['connect','qunit']);
-
-
-
 };
