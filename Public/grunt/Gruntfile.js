@@ -169,8 +169,12 @@ module.exports = function(grunt){
         browserSync:{},
         /**文档生成工具*/
         jsdoc:{
-          shopAPI:{
-            src:["../js/bootstrap/*.js","../js/controller/*.js","../js/model/*.js","../js/template/*.js", "../js/test/*.js","../js/view/*.js"],
+          shopDOC:{
+            src:[
+                   "../js/bootstrap/*.js","../js/controller/*.js",
+                   "../js/model/*.js","../js/template/*.js", "../js/test/*.js",
+                   "../js/view/*.js","../../DevDoc/jsdoc/jsdoc.md"
+                  ],
             options: {
                 destination: '../../DevDoc/QGShopDoc',
                 template : "node_modules/ink-docstrap/template",
