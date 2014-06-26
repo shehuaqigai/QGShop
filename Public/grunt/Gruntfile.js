@@ -134,21 +134,28 @@ module.exports = function(grunt){
             options:{
               console:true,
               timeout:5000,
-               urls: ['http://localhost:6666/index.php/Admin/Index/adminHome']
+               urls: ['http://192.168.1.166/QGShop/index.php/Admin/Index/adminHomeTest']
 
+            }
+          },
+          testMac:{
+             options:{
+              console:true,
+              timeout:5000,
+               urls: ['http://localhost/xampp/QGShop/index.php/Admin/Index/adminHomeTest']
             }
           }
         },
         /*本地服务器监听为了配合单元测试使用*/
         connect:{
-          server:{
-            options: {
-              port:8000,
-              hostname: '127.0.0.1',
-              base:"../../",
-              protocol:"http",
-            }
-          }
+         // server:{
+         //   options: {
+           //   port:8000,
+           //   hostname: '127.0.0.1',
+            //  base:"../../",
+           //   protocol:"http",
+           // }
+         // }
         },
         /**js语法规范检查*/
         jshint:{
@@ -211,14 +218,14 @@ module.exports = function(grunt){
         htmlhint:{},
         /**自动监控执行grunt自动化程序*/
         watch: {
-             options:{
-                        spawn: true,
-                       // debounceDelay: 10000,//连续释放相同路径和状态的事件之前等待的时间。比如，你的Gruntfile.js文件发生了改变，一个改变（changed）事件，只有经过给定的毫秒数后，才能再次触发。
-                        event:['added', 'deleted','changed'],
-                        interval:5000,
-                        interrupt: true
+            options:{
+                spawn: true,
+                // debounceDelay: 10000,//连续释放相同路径和状态的事件之前等待的时间。比如，你的Gruntfile.js文件发生了改变，一个改变（changed）事件，只有经过给定的毫秒数后，才能再次触发。
+                event:['added', 'deleted','changed'],
+                interval:5000,
+                interrupt: true
 
-             },
+            },
             less:{
                 files:['../css/custom/*.less'],
                 tasks:['less:dev_admin_home'],
@@ -254,14 +261,14 @@ module.exports = function(grunt){
       grunt.loadNpmTasks('grunt-contrib-jshint');
       grunt.loadNpmTasks('grunt-contrib-qunit');
       grunt.loadNpmTasks('grunt-contrib-less');
-      grunt.loadNpmTasks('grunt-contrib-concat');
+     // grunt.loadNpmTasks('grunt-contrib-concat');
       grunt.loadNpmTasks('grunt-browser-sync');
       grunt.loadNpmTasks('grunt-contrib-coffee');
       grunt.loadNpmTasks('grunt-contrib-connect');
       grunt.loadNpmTasks('grunt-jsdoc');
 
     //默认的Grunt任务
-  grunt.registerTask('test',['connect','qunit']);
+ // grunt.registerTask('test',['connect','qunit']);
 
 
 

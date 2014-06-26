@@ -64,16 +64,24 @@ class IndexController extends Controller {
                 $this->display();
 
     }
+    /**
+    *首页前端测试
+    *
+    */
+   public function adminHomeTest(){
+     $this->display();
+   }
+
 
     /**
      * 二维码生成器
      * 第一个参数是二维码写入的数据，
-       第二个参数$outfile表示是否输出二维码图片文件(默认为false输出图片)
+     *  第二个参数$outfile表示是否输出二维码图片文件(默认为false输出图片)
      * 如果不输出图片这个就填图片地址
-       第三个参数H是ECC纠错级别，
-      第四个参数是每个黑点的像素，
-       第五个参数4是margin边缘空白的大小，
-       第六个参数false $saveandprint表示是否保存二维码并显示。
+     *  第三个参数H是ECC纠错级别，
+     *第四个参数是每个黑点的像素，
+     *   第五个参数4是margin边缘空白的大小，
+     *  第六个参数false $saveandprint表示是否保存二维码并显示。
     **/
 
     public function QRcodebuilder(){
