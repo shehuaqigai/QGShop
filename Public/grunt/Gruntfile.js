@@ -6,24 +6,67 @@ module.exports = function(grunt){
         /**合并js文件*/
         concat: {
             options: {
-                separator: ';',
-                stripBanners: true,
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'//标题注释
+                //separator: ';',
+               // stripBanners: true,
+               // banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'//标题注释
             },
             dist: {
-                src: [],
-                dest:""
+               // src: [],
+               // dest:""
             }
         },
         /**压缩js文件*/
-        uglify: {
-            options: {
-            },
-            dist: {
+        uglify: {           
+            publish_admin: {
+              options:{
+                //banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',//添加banner
+                //mangle: false, //不混淆变量名
+                //preserveComments: 'all', //不删除注释，还可以为 false（删除全部注释），some（保留@preserve @license @cc_on等注释）
+               // footer:'\n/*! <%= pkg.name %> 最后修改于： <%= grunt.template.today("yyyy-mm-dd") %> */'//添加footer
+              },
                 files: {
-                  //  'assets/js/default.min.js': 'assets/js/default.js'
+                   '../build/release/js/admin.min.js':[
+                      "../js/lib/jquery-2.0.2.js",
+                      "../js/lib/modernizr.js",
+                      "../js/lib/underscore.js",
+                      "../js/lib/backbone.js",
+                      "../js/lib/iscroll.js",
+                      "../js/lib/zebra_dialog.src.js",
+                      "../js/lib/jquery.datetimepicker.js",
+                      "../js/lib/plupload/moxie.js",
+                      "../js/lib/plupload/plupload.dev.js",
+                      "../js/lib/plupload/queue.js",  
+                      "../js/template/admin.tpl.js",
+                      "../js/template/customMenu.tpl.js",
+                      "../js/template/wechatSet.tpl.js",
+                      "../js/template/wechatUserManage.tpl.js",
+                      "../js/template/adminManage.tpl.js",
+                      "../js/template/commodityManage.tpl.js",
+                      "../js/template/otherSetting.tpl.js",
+                      "../js/template/tradeManage.tpl.js",
+                      "../js/model/adminModel.js",
+                      "../js/model/customMenuModel.js",
+                      "../js/model/wechatSetModel.js",
+                      "../js/model/wechatUserManageModel.js",
+                      "../js/model/adminManageModel.js",
+                      "../js/model/commodityManageModel.js",
+                      "../js/model/otherSettingModel.js",
+                      "../js/model/tradeManageModel.js",
+                      "../js/view/customMenuView.js",
+                      "../js/view/wechatSetView.js",
+                      "../js/view/wechatUserManageView.js",
+                      "../js/view/adminView.js",
+                      "../js/view/adminManageView.js",
+                      "../js/view/commodityManageView.js",
+                      "../js/view/otherSettingView.js",
+                      "../js/view/tradeManageView.js",
+                      "../js/controller/adminController.js",
+                      "../js/bootstrap/admin.js"                  
+                    ]
                 }
-            }
+            },
+         
+          
         },
         /**less编译*/
         less:{
@@ -86,7 +129,27 @@ module.exports = function(grunt){
             }
         },
         //单元测试
-        qunit:{},
+        qunit:{
+          test:{
+            options:{
+              console:true,
+              timeout:5000,
+               urls: ['http://localhost:6666/index.php/Admin/Index/adminHome']
+
+            }
+          }
+        },
+        /*本地服务器监听为了配合单元测试使用*/
+        connect:{
+          server:{
+            options: {
+              port:8000,
+              hostname: '127.0.0.1',
+              base:"../../",
+              protocol:"http",
+            }
+          }
+        },
         /**js语法规范检查*/
         jshint:{
             options:{
@@ -194,8 +257,12 @@ module.exports = function(grunt){
       grunt.loadNpmTasks('grunt-contrib-concat');
       grunt.loadNpmTasks('grunt-browser-sync');
       grunt.loadNpmTasks('grunt-contrib-coffee');
+      grunt.loadNpmTasks('grunt-contrib-connect');
       grunt.loadNpmTasks('grunt-jsdoc');
 
     //默认的Grunt任务
-  //  grunt.registerTask('default',['Grunt任务']);
+  grunt.registerTask('test',['connect','qunit']);
+
+
+
 };
