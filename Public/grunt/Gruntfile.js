@@ -266,7 +266,6 @@ module.exports = function(grunt){
       grunt.loadNpmTasks('grunt-contrib-coffee');
       grunt.loadNpmTasks('grunt-contrib-connect');
       grunt.loadNpmTasks('grunt-jsdoc');
-
     //批处理任务
  // grunt.registerTask('test',['connect','qunit']);
 };
