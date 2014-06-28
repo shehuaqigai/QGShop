@@ -3,3 +3,4 @@ Public/grunt/node_modules
 Wechat/Runtime
 .DS_Store
 vender
+composer.lock
