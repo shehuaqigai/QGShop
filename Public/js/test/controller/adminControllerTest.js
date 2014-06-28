@@ -57,12 +57,12 @@
         /**
          * 后台首页默认页
          */
-        main : function() {
-            if(!this.ismain){
+        main : function() {                 
+               if(!this.ismain){
                new ADMIN.V.adminView({collection:new this.collection.navList()});
                 this.ismain=true;
             }else{
-            }
+            }         
         },
         /**
          * 微信基本配置功能对象

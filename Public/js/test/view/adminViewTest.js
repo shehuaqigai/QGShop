@@ -10,13 +10,26 @@
         template:ADMIN.tpl,//模板
         //初始化应用
         initialize:function(){
-            this.models=this.collection;
-            this.render();
+            module("adminViewTest.js->",{setup:function(){
+                ok(true,"开始adminview的initialize函数");
+            },teardown:function(){}})
+            
+            test("获取collection数据调用render方法",function(){
+                ok(!!this.collection,"获取collection数据");
+                    this.models=this.collection;
+                    this.render();
+
+            }.bind(this));
         },
         //渲染首页模板
         render:function(){
-            this.$el.html(this.template.adminHome());
-            this.insertLeftNav();
+            test("开始渲染admin首页",function(){
+                equal(typeof this.template.adminHome(),"string","获取admin首页html模板");
+                this.$el.html(this.template.adminHome());
+                this.insertLeftNav(); 
+
+            }.bind(this))
+           
 
         },
         //生成左边的导航栏
