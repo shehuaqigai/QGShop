@@ -2,5 +2,5 @@
 Public/grunt/node_modules
 Wechat/Runtime
 .DS_Store
-vender
+vendor
 composer.lock
