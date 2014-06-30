@@ -21,7 +21,7 @@
     }
   ],
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "^0.4.5",
     "grunt-browser-sync": "^0.9.1",
     "grunt-contrib-coffee": "^0.10.1",
     "grunt-contrib-concat": "^0.4.0",
