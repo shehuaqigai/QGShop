@@ -1,0 +1,11 @@
+<!--
+* 这个是分类select选项ui
+-->
+        <select name="topCate" class="cateSelect" data-pid="<%= pid %>" >
+                <option value="self" selected="<%if(!id){%> selected <%}%>" >本级分类</option>
+            <% options.each(function(value){ if(value.get("pid")==pid){ %>
+                <option value="<%= value.get("id") %>" selected="<%if(value.get("id")==id){%> selected <%}%>" >
+                    <%= value.get("name") %>
+                </option>
+            <% }}) %>
+        </select>

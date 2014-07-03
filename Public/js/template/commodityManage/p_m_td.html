@@ -1,0 +1,22 @@
+<!--
+* 这个模板是商品管理子功能中表数据的生成的ui
+* @type {*}
+-->
+<% tableContent.each(function(value){ %>
+            <tr>
+                <td><input type="checkbox" name="isSelect" value="<%= value.id %>"></td>
+                <td><%= value.get("id") %></td>
+                <td><img src="<%= value.get("img") %>"/><%= value.get("intro") %></td>
+                <td><%= value.get("buy_num") %></td>
+                <td class="cateId" cate_id="<%= value.get("cate_id") %>"><%= cate[value.get("cate_id")] %></td>
+                <td><%= value.get("price") %></td>
+                <td class="isSell" status="<%= value.get("status") %>">
+                    <i class="<% if(value.get("status")){ %>icon-unlocked <%}else{%> icon-lock2 <%}%> "></i>
+                </td>
+                <td><%= value.get("add_time") %></td>
+                <td width="120px">
+                    <button class="Productedite" id="<%= value.get("id") %>" >编辑</button>
+                    <button id="<%= value.get("id") %>">删除</button>
+                </td>
+            </tr>
+<% }) %>

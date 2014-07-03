@@ -34,14 +34,8 @@
             return data;
         }
     });
-
-
-    
-
     collection.brandMangageTable=product_manage;
     collection.cateTable=cateTable;
-
-
     //创建商品管理模块数据表
     window.ADMIN.M.commodityManage=collection;
 

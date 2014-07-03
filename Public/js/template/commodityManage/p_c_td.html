@@ -1,0 +1,28 @@
+
+<!--
+* 这个模板是分类表中数据填充的ui
+* @type {*}
+-->
+      <% tableContent.each(function(value){if(value.get("pid")==pid){ %>
+        <tr pid="<%= value.get("pid") %>" id="<%= value.get("id") %>">
+            <td>
+                <input type="checkbox" name="selectOrCancelId" value="<%= value.get("id") %>"><%= value.get("id")%>
+            </td>
+            <td class="cateName" >
+                <i class="icon-contract2"></i>
+                <span class="cateNameEdite"><%= value.get("name") %></span>
+                <b class="icon-pencil"></b>
+            </td>
+            <td>
+                <img src="ADMIN.global.APPPATHPublic/resource/uploads/<%= value.get("img") %>"/>
+            </td>
+            <td class="cate_type" status="<%= value.get("type") %>">
+                <% if(value.get("type")){ %>商品类型<%}else{%>标记类型<%}%>
+            </td>
+            <td width="250px">
+                <button class="add_subCate" pid="<%= value.get("pid") %>" id="<%= value.get("id") %>" status="addSubCate">添加子类</button>
+                <button class="updateCate" id="<%= value.get("id") %>" pid="<%= value.get("pid") %>" status="update">编辑</button>
+                <button id="<%= value.get("id") %>" class="deleteCate">删除</button>
+            </td>
+        </tr>
+      <% }}) %>
