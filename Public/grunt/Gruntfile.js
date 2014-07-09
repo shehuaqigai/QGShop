@@ -189,7 +189,7 @@ module.exports = function(grunt){
                          "../js/view/*.js"
                      ]
                  }
-             }
+             }           
         },
         /**html检查*/
         htmlhint:{
