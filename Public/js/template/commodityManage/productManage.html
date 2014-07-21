@@ -1,0 +1,44 @@
+<!--
+     * 这个模板是商品管理子功能的页面
+-->
+      <div>
+        <div class="searchBox">
+            <div>
+                发布时间:<input type="text" id="dateTimePickerStart"/>-<input type="text"  id="dateTimePickerEnd"/>
+                分类:<select name="category" class="product_category">
+                     <% options.each(function(value){ if(value.get("pid")==0){%>
+                        <option value="<%= value.get("id") %>"><%= value.get("name") %></option>
+                      <% }}) %>
+                </select>
+                是否上架: <select name="isUp" class="is_up">
+                    <option value="all" selected>--所有--</option>
+                    <option value="1">上架</option>
+                    <option value="0">下架</option>
+                </select>
+                </div>
+            <div>
+                价格区间:<input type="text" class="priceMin"/>-<input type="text" class="priceMax"/>
+                关键字:<input name="keyword" type="text" class="search-text" size="25" placeholder="输入关键字">
+                <input type="submit" name="search" class="btn" value="搜索">
+            </div>
+        </div>
+        <div class="productData">
+            <table>
+                <caption><strong>商品列表</strong></caption>
+                <thead>
+                    <tr>
+                        <% _.each(table_th,function(value,key){ %>
+                            <th><%= value %><%if(value){%><i class="icon-box-remove"></i><%}%></th>
+                        <% }) %>
+                        <th>管理操作</th>
+                    </tr>
+                </thead>
+                <tbody class="dataLists"></tbody>
+            </table>
+            <div>
+                <input type="checkbox" name="checkall" class="J_checkall">全选/取消
+                <button type="button" class="isDeleteBtn">删除</button>
+                <b id="pages">5 条记录 1/1 页</b>
+            </div>
+        </div>
+     </div>

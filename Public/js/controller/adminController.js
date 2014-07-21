@@ -34,7 +34,7 @@
             'adminManage/:admin' : 'adminManage',
             'adminManage/:role' : 'adminManage',
             //其他设置控制路由
-            'otherSetting/:Advertise' : 'otherSetting',
+            'otherSetting/:advertise' : 'otherSetting',
             'otherSetting/:siteSet' : 'otherSetting'
 },
         collection:ADMIN.M,

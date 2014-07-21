@@ -1,0 +1,11 @@
+<!--左边的设置列表导航视图-->
+    <li>
+        <dl>
+            <dt class="<%= className %>"><i class="icon-contract"></i><%= category %></dt>
+            <div class="switchContainer">
+                <% _.each(contentSet,function(value,key){ %>
+                    <dd class="<%= key %>"><%= value %></dd>
+                <% }) %>
+            </div>
+         </dl>
+    </li>

@@ -1,0 +1,33 @@
+<!--
+* 这个是添加分类子功能的ui
+* @type {*}
+-->
+         <div class="add_categoryAction">
+            <p><i>添加分类</i><input class="close" type="button" value="X" spid="0"/></p> 
+                <table> 
+                    <tr><td>分类名称</td><td><input type="text" class="cate_name"/></td><td>请输入分类名称</td></tr>
+                    <tr><td>上级栏目</td><td colspan="2" class="add_cate_select"></td></tr>
+                    <tr> 
+                        <td>是否首页显示</td> 
+                        <td colspan="2"> 
+                            <input name="visibility" type="radio" class="show" value="1" checked="checked">是 
+                            <input name="visibility" type="radio" class="hide" value="0">否 
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>排序</td>
+                        <td> 
+                            <input class="ordid" type="text" value="0"> 
+                        </td> 
+                        <td>填写数字</td>
+                    </tr>
+                </table>
+                <div id="uploader">
+                    <p>Your browser doesnt have Flash, Silverlight or HTML5 support.</p>
+                </div>
+                <p> 
+                    <input type="button" class="formSubmit" value="确定"/> 
+                    <input class="cancel_submit" type="button" value="取消"/> 
+                </p> 
+                <p class="add_cate_prompt"></p>
+        </div>

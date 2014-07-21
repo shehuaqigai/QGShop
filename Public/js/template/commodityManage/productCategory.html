@@ -1,0 +1,27 @@
+<!--
+* 这个模板是商品分类子功能表数据展示的ui
+* 不包括数据填充
+* @type {*}
+-->
+    <div class="pro_cate">
+        <p><button class="add_cate" pid="0" status="addCate">添加分类</button></p>
+        <table>
+        <caption><strong>商品分类列表</strong></caption>
+        <thead>
+        <tr> 
+        <% _.each(table_th,function(value,key){ %> 
+        <th><%= value %></th> 
+        <% }) %> 
+        </tr>
+        </thead>
+        <tbody class="cateLists"></tbody>
+        <tfoot> 
+            <tr> 
+                <td colspan="5"> 
+                    <input type="checkbox" name="allSelect"/> 
+                    <strong class="allSelectOrCancel">全选/取消</strong> 
+                    <button class="deleteSelect">删除</button></td> 
+            </tr> 
+        </tfoot>
+        </table>
+    </div>

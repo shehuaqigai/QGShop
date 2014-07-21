@@ -17,7 +17,7 @@ module.exports = function(grunt){
         },
         /**压缩js文件*/
         uglify: {           
-            publish_admin: {
+            publish_admin:{
               options:{
                 //banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',//添加banner
                 //mangle: false, //不混淆变量名
@@ -35,38 +35,15 @@ module.exports = function(grunt){
                       "../js/lib/jquery.datetimepicker.js",
                       "../js/lib/plupload/moxie.js",
                       "../js/lib/plupload/plupload.dev.js",
-                      "../js/lib/plupload/queue.js",  
-                      "../js/template/admin.tpl.js",
-                      "../js/template/customMenu.tpl.js",
-                      "../js/template/wechatSet.tpl.js",
-                      "../js/template/wechatUserManage.tpl.js",
-                      "../js/template/adminManage.tpl.js",
-                      "../js/template/commodityManage.tpl.js",
-                      "../js/template/otherSetting.tpl.js",
-                      "../js/template/tradeManage.tpl.js",
-                      "../js/model/adminModel.js",
-                      "../js/model/customMenuModel.js",
-                      "../js/model/wechatSetModel.js",
-                      "../js/model/wechatUserManageModel.js",
-                      "../js/model/adminManageModel.js",
-                      "../js/model/commodityManageModel.js",
-                      "../js/model/otherSettingModel.js",
-                      "../js/model/tradeManageModel.js",
-                      "../js/view/customMenuView.js",
-                      "../js/view/wechatSetView.js",
-                      "../js/view/wechatUserManageView.js",
-                      "../js/view/adminView.js",
-                      "../js/view/adminManageView.js",
-                      "../js/view/commodityManageView.js",
-                      "../js/view/otherSettingView.js",
-                      "../js/view/tradeManageView.js",
+                      "../js/lib/plupload/queue.js",
+                      "../js/template/**/*.tpl.js",
+                      "../js/model/*.js",
+                      "../js/view/*.js",
                       "../js/controller/adminController.js",
-                      "../js/bootstrap/admin.js"                  
+                      "../js/bootstrap/admin.js"
                     ]
                 }
-            },
-         
-          
+            }
         },
         /**less编译*/
         less:{
@@ -207,15 +184,65 @@ module.exports = function(grunt){
                          "../js/bootstrap/*.js",
                          "../js/controller/*.js",
                          "../js/model/*.js",
-                         "../js/template/*.js",
+                         "../js/template/**/*.js",
                          "../js/test/*.js",
                          "../js/view/*.js"
                      ]
                  }
-             }
+             }           
         },
         /**html检查*/
-        htmlhint:{},
+        htmlhint:{
+            options:{
+                "tagname-lowercase": true,
+                "attr-lowercase": true,
+                "attr-value-double-quotes": true,
+                "doctype-first": true,
+                "tag-pair": true,
+                "spec-char-escape": true,
+                "id-unique": true,
+                "src-not-empty": true,
+                "attr-value-not-empty":true,
+                "attr-no-duplication":true,
+                "tag-self-close":true,
+                "head-script-disabled":true,
+                "img-alt-require":true,
+                "doctype-html5":true,
+                "id-class-value":true,
+                "style-disabled":true,
+                "space-tab-mixed-disabled":true,
+                "id-class-ad-disabled":true,
+                "href-abs-or-rel":true,
+                "attr-unsafe-chars":true
+                //htmlhintrc: '.htmlhintrc'//配置文件
+            },
+            admin:{
+                src:["../js/template/admin/*.html"]
+            },
+            commodityManage: {
+                src: ["../js/template/commodityManage/*.html"]
+            },
+            adminManage: {
+                src: ["../js/template/adminManage/*.html"]
+            },
+            customMenu: {
+                src:["../js/template/customMenu/*.html"]
+            },
+            otherSetting: {
+                src: ["../js/template/otherSetting/*.html"]
+            },
+            tradeManage: {
+                src: ["../js/template/tradeManage/*.html"]
+            },
+            wechatSet: {
+                src: ["../js/template/wechatSet/*.html"]
+            },
+            wechatUserManage: {
+                src:["../js/template/wechatUserManage/*.html"]
+            }
+
+
+        },
         /**自动监控执行grunt自动化程序*/
         watch: {
             options:{
@@ -224,15 +251,46 @@ module.exports = function(grunt){
                 event:['added', 'deleted','changed'],
                 interval:5000,
                 interrupt: true
-
             },
             less:{
                 files:['../css/custom/*.less'],
-                tasks:['less:dev_admin_home'],
+                tasks:['less:dev_admin_home']
             },
             jshint:{
               files:["../js/bootstrap/*.js","../js/controller/*.js", "../js/model/*.js","../js/template/*.js","../js/test/*.js","../js/view/*.js"],
               tasks:['jshint']
+            },
+            htmltjs_admin:{
+                    files:["../js/template/admin/*.html"],
+                    tasks:['htmltjs:admin']
+            },
+            htmltjs_commodityManage: {
+                files: ["../js/template/commodityManage/*.html"],
+                tasks:['htmltjs:commodityManage']
+            },
+            htmltjs_adminManage: {
+                files: ["../js/template/adminManage/*.html"],
+                tasks:['htmltjs:adminManage']
+            },
+            htmltjs_customMenu: {
+                files:["../js/template/customMenu/*.html"],
+                tasks:['htmltjs:customMenu']
+            },
+            htmltjs_otherSetting: {
+                files: ["../js/template/otherSetting/*.html"],
+                tasks:['htmltjs:otherSetting']
+            },
+            htmltjs_tradeManage: {
+                files: ["../js/template/tradeManage/*.html"],
+                tasks:['htmltjs:tradeManage']
+            },
+            htmltjs_wechatSet: {
+                files: ["../js/template/wechatSet/*.html"],
+                tasks:['htmltjs:wechatSet']
+            },
+            htmltjs_wechatUserManage: {
+                files:["../js/template/wechatUserManage/*.html"],
+                tasks:['htmltjs:wechatUserManage']
             }
         },
         /**打开多个浏览器查看兼容性*/
@@ -251,9 +309,57 @@ module.exports = function(grunt){
                 configure : "node_modules/ink-docstrap/template/jsdoc.conf.json"
             }
           }
+        },
+        /**
+         *html模板编译到underscore的—.template()中
+         */
+        htmltjs: {
+          options: {
+            namespace:"tpl",
+            root:'ADMIN'
+          },
+            admin: {
+                files: {
+                    "../js/template/admin/admin.tpl.js": ["../js/template/admin/*.html"]
+                }
+            },
+            commodityManage: {
+                files: {
+                    "../js/template/commodityManage/commodityManage.tpl.js": ["../js/template/commodityManage/*.html"]
+                }
+            },
+            adminManage: {
+                files: {
+                    "../js/template/adminManage/adminManage.tpl.js": ["../js/template/adminManage/*.html"]
+                }
+            },
+            customMenu: {
+                files: {
+                    "../js/template/customMenu/customMenu.tpl.js": ["../js/template/customMenu/*.html"]
+                }
+            },
+            otherSetting: {
+                files: {
+                    "../js/template/otherSetting/otherSetting.tpl.js": ["../js/template/otherSetting/*.html"]
+                }
+            },
+            tradeManage: {
+                files: {
+                    "../js/template/tradeManage/tradeManage.tpl.js": ["../js/template/tradeManage/*.html"]
+                }
+            },
+            wechatSet: {
+                files: {
+                    "../js/template/wechatSet/wechatSet.tpl.js": ["../js/template/wechatSet/*.html"]
+                }
+            },
+            wechatUserManage: {
+                files: {
+                    "../js/template/wechatUserManage/wechatUserManage.tpl.js": ["../js/template/wechatUserManage/*.html"]
+                }
+            }
         }
     });
-
     //加载Grunt插件
       grunt.loadNpmTasks('grunt-contrib-watch');
       grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -266,6 +372,7 @@ module.exports = function(grunt){
       grunt.loadNpmTasks('grunt-contrib-coffee');
       grunt.loadNpmTasks('grunt-contrib-connect');
       grunt.loadNpmTasks('grunt-jsdoc');
+      grunt.loadNpmTasks('grunt-htmltjs');
     //批处理任务
  // grunt.registerTask('test',['connect','qunit']);
 };
